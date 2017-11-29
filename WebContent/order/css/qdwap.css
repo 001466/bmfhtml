@@ -783,7 +783,7 @@ div.dibu_daojishi span{
 
 .ordul,.ordul2{width:100%;}
 
-.ordul li{width:260px;float:left;background:#EEE;margin:0 6px 6px 0px;color:#a90201;font-size:14px;line-height:20px;vertical-align:top;}
+.ordul li{width:380px;float:left;background:#EEE;margin:0 6px 6px 0px;color:#a90201;font-size:14px;line-height:20px;vertical-align:top;}
 
 .ordul li label{display:block;padding:6px;}
 
@@ -794,6 +794,7 @@ div.dibu_daojishi span{
 .ordul li span{font-size:18px;font-weight:bold;}
 
 .leb_xz{padding:4px !important;border:2px solid #f00;}
+
 
 
 
