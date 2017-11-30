@@ -7,9 +7,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1">
-<meta
-	content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0"
-	name="viewport" />
+<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" name="viewport" />
 <meta content="yes" name="apple-mobile-web-app-capable" />
 <meta content="yes" name="apple-touch-fullscreen" />
 <meta content="black" name="apple-mobile-web-app-status-bar-style" />
@@ -18,55 +16,59 @@
 <title>本命佛订单</title>
 <link rel="stylesheet" href="css/qdwap.css" />
 <script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="js/jquery.validate.js"></script>
+
 <script type="text/javascript" src="js/area.js"></script>
 <script type="text/javascript" src="js/jisuan.js"></script>
 <script type="text/javascript" src="js/demo.js"></script>
 <script type="text/javascript" src="js/window.js"></script>
+
 <script type="text/javascript">
         function TMclose() {
             $('.win iframe').remove();
             $('.win').remove();
-			
-	            parent.location.href = 'http://hx-xj.wangzhan0123.cn/';
-
+	            //parent.location.href = 'http://hx-xj.wangzhan0123.cn/';
 	        }
 	        function HYclose() {
 	            $('.win iframe').remove();
 	            $('.win').remove();
-	            parent.location.href = 'http://hx-xj.wangzhan0123.cn/';
+	            //parent.location.href = 'http://hx-xj.wangzhan0123.cn/';
         }
 	</script>
 <link href="css/window.css" rel="stylesheet" />
 <script src="Js/base-loading.js"></script>
 
 </head>
+
 <body>
 
 	<!--订单-->
 	<div class="dt-1">
 		<img src="images/dt_bg.png" style="width: 100%">
 	</div>
+
 	<div id="order">
 		<div class="warp">
-			<form method="post"
-				action="http://crm.jiekezunni.cn/Ztrh_Hty/HtyOrder198SPTSL.aspx"
+			
+			<!--<form method="post"	action="http://localhost:8888/bmf/order"-->
+			
+			
+			<form method="post"	action="http://crm.jiekezunni.cn/Ztrh_Hty/HtyOrder198SPTSL.aspx"
+				
+				
 				id="ordeForm">
 				<div class="aspNetHidden">
-					<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE"
-						value="/wEPDwUJODU2Njg3NjYyZGSnZoUeYMU0eh8HyqQe6nBOT2/kr/AVPdSlBjUe7/ynJA==" />
+					<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJODU2Njg3NjYyZGSnZoUeYMU0eh8HyqQe6nBOT2/kr/AVPdSlBjUe7/ynJA==" />
 				</div>
 
 				<div class="aspNetHidden">
-
-					<input type="hidden" name="__VIEWSTATEGENERATOR"
-						id="__VIEWSTATEGENERATOR" value="16C75A46" /> <input
-						type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION"
-						value="/wEdACjTiBgrH0B+177wVol1Vxxl1Eu9ypq32h01rLBx7zT8iu1er2OJVF1w5a3W3R48Yl3K1969ABGZCdU24XwGespFfMLR65zG3uEUCDK6eUbarNVVywmZ4kBIoTw2mza0rfQULSgzLjicJC37NloIir5jUxrFvFAt74STsp4R3kbwUb6b1Y8r5ujee7Zt6AK7E7uCdlAfNxGO/a/tlNT6qz65zAAuqMMimHf9aK/Br67bM4wZ1KBP8bZc6/4mcUaOzf4qqz0zoMmEic+LPQ5ztO2IwHK3c11R0WZRbj2WjA7PUCif19hVOKGgJ9xCukTvcdtTHNYUTroC16rtvW2C5OhrNjcfzVEVQDkEAtrBfMVM63/ZCyZtCFWE3pyc2AdzHtgKIvvkhmD7EHI0k4D2xM35zhtLgrml0NNbjSMh4OX37uyZehi+GkVBIwh5gg9s25BK4TwWPmXBZohZner/sTrYvcQkybJJcRiDT2d3j7irvXM+1UnNGCPJlyD8tj67caG/it0D1uvsjz/a5VUGSA+acrW2ioJct/yoE2Vpz0l2edcM9cbel79AJQRHNIYian+FEiPrwU8RDW62N3baxfJmudihCVVEyZinYlnacNxXWOIleUiNy1YokSpAKag7EVSTjHp0hDZ8hCyNVB7dDpNw6VDEoOSvON7KoNhTzoYluZnPO64c+Vv28hOjj+hugc5ouRkZheSII/8erfiyx7HqkqifxFqrdfQ88GYi6sxuJtJyeEQCyDSs/PqCZHVm6vAnGAyIEUDjKNVyoFoW7C6SWiyj2PafyRUSdt2klQIVManSUXDak4LUhCZ/q4c/McWlBnbZypN6GJELF/L4cgKOhORRIHQ2NtquobWMtcXlIaF1BTWZ6wwwAHmK79O1x9g=" />
+					<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="16C75A46" /> 
+					<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdACjTiBgrH0B+177wVol1Vxxl1Eu9ypq32h01rLBx7zT8iu1er2OJVF1w5a3W3R48Yl3K1969ABGZCdU24XwGespFfMLR65zG3uEUCDK6eUbarNVVywmZ4kBIoTw2mza0rfQULSgzLjicJC37NloIir5jUxrFvFAt74STsp4R3kbwUb6b1Y8r5ujee7Zt6AK7E7uCdlAfNxGO/a/tlNT6qz65zAAuqMMimHf9aK/Br67bM4wZ1KBP8bZc6/4mcUaOzf4qqz0zoMmEic+LPQ5ztO2IwHK3c11R0WZRbj2WjA7PUCif19hVOKGgJ9xCukTvcdtTHNYUTroC16rtvW2C5OhrNjcfzVEVQDkEAtrBfMVM63/ZCyZtCFWE3pyc2AdzHtgKIvvkhmD7EHI0k4D2xM35zhtLgrml0NNbjSMh4OX37uyZehi+GkVBIwh5gg9s25BK4TwWPmXBZohZner/sTrYvcQkybJJcRiDT2d3j7irvXM+1UnNGCPJlyD8tj67caG/it0D1uvsjz/a5VUGSA+acrW2ioJct/yoE2Vpz0l2edcM9cbel79AJQRHNIYian+FEiPrwU8RDW62N3baxfJmudihCVVEyZinYlnacNxXWOIleUiNy1YokSpAKag7EVSTjHp0hDZ8hCyNVB7dDpNw6VDEoOSvON7KoNhTzoYluZnPO64c+Vv28hOjj+hugc5ouRkZheSII/8erfiyx7HqkqifxFqrdfQ88GYi6sxuJtJyeEQCyDSs/PqCZHVm6vAnGAyIEUDjKNVyoFoW7C6SWiyj2PafyRUSdt2klQIVManSUXDak4LUhCZ/q4c/McWlBnbZypN6GJELF/L4cgKOhORRIHQ2NtquobWMtcXlIaF1BTWZ6wwwAHmK79O1x9g=" />
 				</div>
 				<input name="fromurl" type="text" id="fromurl" style="display: none" />
 				<input name="isuser" type="text" id="isuser" style="display: none" />
-				<input type="hidden" name="Products" id="Products" /> <input
-					type="hidden" name="Prices" id="Prices" />
+				<input type="hidden" name="Products" id="Products" /> 
+				<input type="hidden" name="Prices" id="Prices" />
 				<div class="bdbox">
 					<label class="bdxx"> <em>*</em>注意
 					</label>
@@ -79,16 +81,14 @@
 					<label class="bdxx"> <em>*</em>姓名
 					</label>
 					<div class="textbox">
-						<input name="name" type="text" id="name" class="input"
-							maxlength="20" />
+						<input name="name" type="text" id="name" class="input" maxlength="20" required/>
 					</div>
 				</div>
 				<div class="bdbox">
 					<label class="bdxx"> <em>*</em>手机
 					</label>
 					<div class="textbox">
-						<input name="tel" type="text" id="tel" maxlength="11"
-							class="input" />
+						<input name="tel" type="text" id="tel" maxlength="11" class="input" />
 					</div>
 				</div>
 				<!--附加属性b-->
@@ -111,7 +111,6 @@
 							<option value="鸡">肖【鸡】本命佛--不动明王菩萨</option>
 							<option value="狗">肖【狗】本命佛--阿弥陀佛</option>
 							<option value="猪">肖【猪】本命佛--阿弥陀佛</option>
-
 						</select>
 					</div>
 				</div>
@@ -120,7 +119,7 @@
 					</label>
 					<div class="dxbox red">
 						<ul class="ordul" id="ordul">
-							<li><label> <input type="checkbox" name="checkb" width="150px" height="150px"  
+							<li><label> <input type="checkbox" name="checkb"
 									class="ck" id="Checkb01" value="3000|198|黑曜石"
 									onclick="allcp(this);" /> <img
 									src="images/TB2mkZWc4mJ.eBjy0FhXXbBdFXa_!!1699978161.jpg">
@@ -129,7 +128,7 @@
 										id="Num1">335</b>尊)
 								</span>
 							</label></li>
-							<li><label> <input type="checkbox" name="checkb" width="50px" height="50px"
+							<li><label> <input type="checkbox" name="checkb"
 									class="ck" id="Checkb02" value="3011|298|冰种黑曜石"
 									onclick="allcp(this);" /> <img
 									src="images/TB2H2MpdF5N.eBjSZFvXXbvMFXa_!!1699978161.jpg">
@@ -137,7 +136,7 @@
 									style="color: green; font-size: 10px;">(已奉请<b id="Num2">335</b>尊)
 								</span>
 							</label></li>
-							<li><label> <input type="checkbox" name="checkb" width="50px" height="50px"
+							<li><label> <input type="checkbox" name="checkb"
 									class="ck" id="Checkb04" value="3013|398|红玛瑙"
 									onclick="allcp(this);" /> <img
 									src="images/TB2A2QMc31J.eBjy0FaXXaXeVXa_!!1699978161.jpg">
@@ -145,7 +144,7 @@
 									style="color: green; font-size: 10px;">(已奉请<b id="Num3">335</b>尊)
 								</span>
 							</label></li>
-							<li><label> <input type="checkbox" name="checkb" width="50px" height="50px"
+							<li><label> <input type="checkbox" name="checkb"
 									class="ck" id="Checkb06" value="3015|398|和田玉"
 									onclick="allcp(this);" /> <img
 									src="images/TB2Y2MpdF5N.eBjSZFvXXbvMFXa_!!1699978161.jpg">
@@ -204,11 +203,11 @@
 					</label>
 					<div class="xlbox">
 						<select name="Province" id="Province" errorid="errorArea"
-							emp="true" des="地区" class="dqxl" >
+							emp="true" des="地区" class="dqxl" style="width: 30%;">
 						</select> <select name="City" id="City" errorid="errorArea" emp="true"
-							class="dqxl">
+							class="dqxl" style="width: 30%;">
 						</select> <select name="County" id="County" errorid="errorArea" emp="true"
-							des="地区" class="dqxl">
+							des="地区" class="dqxl" style="width: 29%;">
 						</select>
 					</div>
 					<script type="text/javascript">
@@ -229,8 +228,7 @@
 					<label class="bdxx"> <em>*</em>地址
 					</label>
 					<div class="textbox">
-						<input name="xSaddress" type="text" id="xSaddress" class="input"
-							placeholder="XX镇XX街" />
+						<input name="xSaddress" type="text" id="xSaddress" class="input" placeholder="XX镇XX街" />
 					</div>
 				</div>
 				<div class="bdbox">
@@ -272,8 +270,8 @@
 				</div>
 				<div class="subbox">
 					<input type="submit" name="Button_Save" value="确认下单 (货到付款)"
-						onclick="ShowProgressBar();" id="Button_Save" name="btname"
-						style="-webkit-appearance: none; appearance: none; -moz-appearance: none;" />
+						onclick="ShowProgressBar();" id="Button_Save" name="btname" 
+						style="-webkit-appearance: none; appearance: none; -moz-appearance: none;" onsubmit="mySubmit();"/>
 				</div>
 				<div id="divProgress"
 					style="text-align: center; display: none; position: fixed; top: 50%; left: 50%;">
@@ -284,6 +282,18 @@
 					style="background-color: #F2F4F7; display: none; left: 0px; position: absolute; top: 0px;">
 				</div>
 				<script type="text/javascript">
+				
+				 
+					
+
+				
+				//提交
+				function mySubmit(){
+					// validate the comment form when it is submitted
+					return $("#ordeForm").validate();
+					
+				}
+				
                 // 顯示讀取遮罩
                 function ShowProgressBar() {
                     displayProgress();
@@ -324,6 +334,8 @@
         var not3yanse = new Array(" 肖鼠--黑曜石吊坠", " 肖牛--冰种黑曜石", " 肖虎--白玛瑙吊坠", " 肖兔--红玛瑙吊坠", " 肖龙--和田玉吊坠", " 肖蛇--和田青玉本命佛", " 肖马--黑曜石吊坠", " 肖羊--冰种黑曜石", " 肖猴--白玛瑙吊坠", " 肖鸡--和田玉吊坠", " 肖狗--和田青玉本命佛", " 肖猪--黑曜石吊坠");
         var not3chima = new Array();
     </script>
+	
+	
 	<div id="fahuo">
 		<script type="text/javascript" src="js/fahuo.js"></script>
 	</div>
