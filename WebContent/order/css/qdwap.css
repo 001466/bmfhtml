@@ -781,13 +781,13 @@ div.dibu_daojishi span{
 
 .ordul,.ordul2{width:100%;}
 
-.ordul li{width:320px;float:left;background:#EEE;margin:0 6px 6px 0px;color:#a90201;font-size:16px;line-height:20px;vertical-align:top;}
+.ordul li{width:340px; float:left;background:#EEE;margin:0 6px 6px 0px;color:#a90201;font-size:16px;line-height:20px;vertical-align:top;}
 
-.ordul li label{display:block;padding:6px;}
+.ordul li label{display:block;padding:6px;height:100px;}
 
-.ordul li label input{float:left;margin-top:18px;}
+.ordul li label input{float:left;margin-top:18px;display: none;}
 
-.ordul li img{width:40px;float:left;margin:0 4px;}
+.ordul li img{width:80px;height:80px; float:left;margin:0 4px;}
 
 .ordul li span{font-size:20px;font-weight:bold;}
 
