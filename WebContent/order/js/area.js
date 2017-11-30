@@ -1,6 +1,6 @@
 //省市区三级联动JS
 
-var ZProvince = "";//省分
+var ZProvince = "";//省份
 
 var ZCity = "";//城市
 
