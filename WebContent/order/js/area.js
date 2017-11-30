@@ -1,10 +1,10 @@
 //省市区三级联动JS
 
-var ZProvince = "省份";
+var ZProvince = "";//省分
 
-var ZCity = "城市";
+var ZCity = "";//城市
 
-var ZArea = "地区";
+var ZArea = "";//地区
 
 var ZShowTips = 1;
 

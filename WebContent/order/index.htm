@@ -14,8 +14,11 @@
 <meta content="320" name="MobileOptimized" />
 <meta content="telephone=no" name="format-detection" />
 <title>本命佛订单</title>
+
 <link rel="stylesheet" href="css/qdwap.css" />
-<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+<link rel="stylesheet" href="css/screen.css" />
+
+<script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript" src="js/jquery.validate.js"></script>
 
 <script type="text/javascript" src="js/area.js"></script>
@@ -24,6 +27,7 @@
 <script type="text/javascript" src="js/window.js"></script>
 
 <script type="text/javascript">
+
         function TMclose() {
             $('.win iframe').remove();
             $('.win').remove();
@@ -34,7 +38,15 @@
 	            $('.win').remove();
 	            //parent.location.href = 'http://hx-xj.wangzhan0123.cn/';
         }
-	</script>
+	        
+	        
+        jQuery.validator.addMethod("mobile", function(value, element) {
+          var length = value.length;
+          var mobile = /^(((13[0-9]{1})|(15[0-9]{1})|(18[0-9]{1})|(17[0-9]{1}))+\d{8})$/;
+          return this.optional(element) || (length == 11 && mobile.test(value));
+        }, "请输入正确手机号");//可以自定义默认提示信息
+	           
+</script>
 <link href="css/window.css" rel="stylesheet" />
 <script src="Js/base-loading.js"></script>
 
@@ -50,25 +62,20 @@
 	<div id="order">
 		<div class="warp">
 			
-			<!--<form method="post"	action="http://localhost:8888/bmf/order"-->
+			
+			<!-- <form method="post"	action="http://crm.jiekezunni.cn/Ztrh_Hty/HtyOrder198SPTSL.aspx" -->
+			<!-- <form method="post"	action="http://localhost:8888/bmf/order" -->
+			
+			<form method="post"	action="http://localhost:8888/bmf/order"
 			
 			
-			<form method="post"	action="http://crm.jiekezunni.cn/Ztrh_Hty/HtyOrder198SPTSL.aspx"
 				
 				
-				id="ordeForm">
-				<div class="aspNetHidden">
-					<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJODU2Njg3NjYyZGSnZoUeYMU0eh8HyqQe6nBOT2/kr/AVPdSlBjUe7/ynJA==" />
-				</div>
-
-				<div class="aspNetHidden">
-					<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="16C75A46" /> 
-					<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdACjTiBgrH0B+177wVol1Vxxl1Eu9ypq32h01rLBx7zT8iu1er2OJVF1w5a3W3R48Yl3K1969ABGZCdU24XwGespFfMLR65zG3uEUCDK6eUbarNVVywmZ4kBIoTw2mza0rfQULSgzLjicJC37NloIir5jUxrFvFAt74STsp4R3kbwUb6b1Y8r5ujee7Zt6AK7E7uCdlAfNxGO/a/tlNT6qz65zAAuqMMimHf9aK/Br67bM4wZ1KBP8bZc6/4mcUaOzf4qqz0zoMmEic+LPQ5ztO2IwHK3c11R0WZRbj2WjA7PUCif19hVOKGgJ9xCukTvcdtTHNYUTroC16rtvW2C5OhrNjcfzVEVQDkEAtrBfMVM63/ZCyZtCFWE3pyc2AdzHtgKIvvkhmD7EHI0k4D2xM35zhtLgrml0NNbjSMh4OX37uyZehi+GkVBIwh5gg9s25BK4TwWPmXBZohZner/sTrYvcQkybJJcRiDT2d3j7irvXM+1UnNGCPJlyD8tj67caG/it0D1uvsjz/a5VUGSA+acrW2ioJct/yoE2Vpz0l2edcM9cbel79AJQRHNIYian+FEiPrwU8RDW62N3baxfJmudihCVVEyZinYlnacNxXWOIleUiNy1YokSpAKag7EVSTjHp0hDZ8hCyNVB7dDpNw6VDEoOSvON7KoNhTzoYluZnPO64c+Vv28hOjj+hugc5ouRkZheSII/8erfiyx7HqkqifxFqrdfQ88GYi6sxuJtJyeEQCyDSs/PqCZHVm6vAnGAyIEUDjKNVyoFoW7C6SWiyj2PafyRUSdt2klQIVManSUXDak4LUhCZ/q4c/McWlBnbZypN6GJELF/L4cgKOhORRIHQ2NtquobWMtcXlIaF1BTWZ6wwwAHmK79O1x9g=" />
-				</div>
-				<input name="fromurl" type="text" id="fromurl" style="display: none" />
-				<input name="isuser" type="text" id="isuser" style="display: none" />
-				<input type="hidden" name="Products" id="Products" /> 
-				<input type="hidden" name="Prices" id="Prices" />
+			id="ordeForm">
+			
+				<input type="hidden" name="productId" id="Products" /> 
+				<input type="hidden" name="productPrices" id="Prices" />
+				
 				<div class="bdbox">
 					<label class="bdxx"> <em>*</em>注意
 					</label>
@@ -76,29 +83,32 @@
 						<label> 同一生肖奉请多尊请留言备注</label><br>
 					</div>
 				</div>
+				
 				<!--附加属性e-->
 				<div class="bdbox">
-					<label class="bdxx"> <em>*</em>姓名
-					</label>
+					<label class="bdxx"> <em>*</em>姓名</label>
 					<div class="textbox">
-						<input name="name" type="text" id="name" class="input" maxlength="20" required/>
+						<input name="customName"  id="name"  type="text" class="input"  data-rule-required="true" data-msg-required=" * 请输入姓名" />
 					</div>
 				</div>
+				
 				<div class="bdbox">
-					<label class="bdxx"> <em>*</em>手机
-					</label>
+					<label class="bdxx"> <em>*</em>手机</label>
 					<div class="textbox">
-						<input name="tel" type="text" id="tel" maxlength="11" class="input" />
+						<input name="customMobile" id="tel"  type="text" class="input" data-rule-required="true" data-rule-mobile="true" data-msg-required=" * 请输入手机号" maxlength="11"/>
 					</div>
 				</div>
+				
+				
+				 
+							
 				<!--附加属性b-->
 				<div class="bdbox">
-					<label class="bdxx"> <em>*</em>生肖
-					</label>
-					<div class="dxbox red">
-						<select name="DropDownListSX" id="DropDownListSX"
-							style="width: 90%;">
-							<option value="0">请选择生肖及本命佛</option>
+					<label class="bdxx"> <em>*</em>生肖</label>
+					<div class="textbox">
+						<select name="productBranch" id="DropDownListSX"
+							style="width: 90%;" class="dqxl" emp="true"  data-rule-required="true" data-msg-required=" * 请输选择生肖" >
+							<option></option>
 							<option value="鼠">肖【鼠】本命佛--千手观音菩萨</option>
 							<option value="牛">肖【牛】本命佛--虚空藏菩萨</option>
 							<option value="虎">肖【虎】本命佛--虚空藏菩萨</option>
@@ -114,136 +124,142 @@
 						</select>
 					</div>
 				</div>
+				
 				<div class="bdbox">
-					<label class="bdxx"> <em>*</em>圣品
-					</label>
+					<label class="bdxx"> <em>*</em>圣品</label>
 					<div class="dxbox red">
 						<ul class="ordul" id="ordul">
-							<li><label> <input type="checkbox" name="checkb"
-									class="ck" id="Checkb01" value="3000|198|黑曜石"
-									onclick="allcp(this);" /> <img
-									src="images/TB2mkZWc4mJ.eBjy0FhXXbBdFXa_!!1699978161.jpg">
-									黑曜石吊坠(送貔貅手链)<br> 结缘价：<span>198</span> <span
-									style="color: green; font-size: 10px; width: 100px;">(已奉请<b
-										id="Num1">335</b>尊)
+							<li>
+							<label> 
+								<input type="checkbox" name="productMaterial" class="ck" id="Checkb01" value="3000|198|黑曜石"	onclick="allcp(this);" /> 
+								<img src="images/TB2mkZWc4mJ.eBjy0FhXXbBdFXa_!!1699978161.jpg">	
+								黑曜石吊坠(送貔貅手链)
+								<br> 结缘价：<span>198</span> <span style="color: green; font-size: 10px;">(已奉请<b id="Num1">335</b>尊)</span>
+							</label>
+							</li>
+							
+							<li>
+							<label> 
+								<input type="checkbox" name="productMaterial" class="ck" id="Checkb02" value="3011|298|冰种黑曜石" onclick="allcp(this);" /> 
+								<img src="images/TB2H2MpdF5N.eBjSZFvXXbvMFXa_!!1699978161.jpg">	
+								冰种黑曜石(送貔貅手链)
+								<br> 结缘价：<span>298</span> <span style="color: green; font-size: 10px;">(已奉请<b id="Num2">335</b>尊)	</span>
+							</label>
+							</li>
+							
+							<li>
+							<label> 
+								<input type="checkbox" name="productMaterial" class="ck" id="Checkb04" value="3013|398|红玛瑙" onclick="allcp(this);" /> 
+								<img src="images/TB2A2QMc31J.eBjy0FaXXaXeVXa_!!1699978161.jpg">	
+								红玛瑙吊坠(送貔貅手链)
+								<br> 结缘价：<span>398</span> <span style="color: green; font-size: 10px;">(已奉请<b id="Num3">335</b>尊)
 								</span>
-							</label></li>
-							<li><label> <input type="checkbox" name="checkb"
-									class="ck" id="Checkb02" value="3011|298|冰种黑曜石"
-									onclick="allcp(this);" /> <img
-									src="images/TB2H2MpdF5N.eBjSZFvXXbvMFXa_!!1699978161.jpg">
-									冰种黑曜石(送貔貅手链)<br> 结缘价：<span>298</span> <span
-									style="color: green; font-size: 10px;">(已奉请<b id="Num2">335</b>尊)
+							</label>
+							</li>
+							
+							<li>
+							<label> 
+								<input type="checkbox" name="productMaterial" class="ck" id="Checkb06" value="3015|398|和田玉" onclick="allcp(this);" /> 
+								<img src="images/TB2Y2MpdF5N.eBjSZFvXXbvMFXa_!!1699978161.jpg">
+								和田玉吊坠(送貔貅手链)
+								<br> 结缘价：<span>398</span> <span style="color: green; font-size: 10px;">(已奉请<b id="Num4">385</b>尊)
 								</span>
-							</label></li>
-							<li><label> <input type="checkbox" name="checkb"
-									class="ck" id="Checkb04" value="3013|398|红玛瑙"
-									onclick="allcp(this);" /> <img
-									src="images/TB2A2QMc31J.eBjy0FaXXaXeVXa_!!1699978161.jpg">
-									红玛瑙吊坠(送貔貅手链)<br> 结缘价：<span>398</span> <span
-									style="color: green; font-size: 10px;">(已奉请<b id="Num3">335</b>尊)
-								</span>
-							</label></li>
-							<li><label> <input type="checkbox" name="checkb"
-									class="ck" id="Checkb06" value="3015|398|和田玉"
-									onclick="allcp(this);" /> <img
-									src="images/TB2Y2MpdF5N.eBjSZFvXXbvMFXa_!!1699978161.jpg">
-									和田玉吊坠(送貔貅手链)<br> 结缘价：<span>398</span> <span
-									style="color: green; font-size: 10px;">(已奉请<b id="Num4">385</b>尊)
-								</span>
-							</label></li>
+							</label>
+							</li>
 						</ul>
 					</div>
 				</div>
-				<input type="hidden" name="Url" id="Url" />
+				
+				<input type="hidden" name="type" id="Url" />
+				
 				<script type="text/javascript">
-                $(function () {
+	                $(function () {
+	
+	                    $("#ordul").find("input:checkbox").eq(2).click();
+	                    $("#Url").val(window.location.href);
+	                    
+	                })
+	                    
+	            </script>
 
-                    $("#ordul").find("input:checkbox").eq(2).click();
-                    ////$("#qudao").val(document.referrer);
-                    $("#qudao").val(window.location.href);
-                    $("#Url").val(window.location.href);
-                })
-                    
-            </script>
 				<div class="bdbox" style="display: none;">
 					<label class="bdxx" style="color: Red; padding-right: 0;">
-						<img src="images/99.gif" width="60px"> <br /> 限量抢
+						<img src="images/99.gif" width="60px"> 
+						<br /> 限量抢
 					</label>
 					<div class="text3box">
-						<ul class="ordul" id="Ul1">
-							<li><label> <input type="checkbox" name="checkb"
-									class="ck" id="Checkbox1" value="3015|99|99元菩提手链"
-									onclick="allcp(this);" /> <img src="images/ptsl.jpg">限前100名<br>
-									结缘价：<span>99</span>
-							</label></li>
+							<ul class="ordul" id="Ul1">
+								<li>
+									<label> 
+										<input type="checkbox" name="productMaterial" class="ck" id="Checkbox1" value="3015|99|99元菩提手链" onclick="allcp(this);" /> 
+										<img src="images/ptsl.jpg">限前100名<br>结缘价：<span>99</span>
+									</label>
+								</li>
+							</ul>
 					</div>
 				</div>
+				
 				<div class="bdbox">
-					<label class="bdxx"> <em>*</em>金额
-					</label>
+					<label class="bdxx"> <em>*</em>金额 </label>
 					<div class="text3box">
-						<span id="mon" name="mon">0</span>元&nbsp;<span id="bazhe1"
-							style="display: none;"><font size="5px"></font></span><span
-							id="taoshu" style="display: none;"></span><span id="bazhe2"
-							style="display: none;"></span>
+						<span id="mon" name="mon">0</span>元&nbsp;
+						<span id="bazhe1" style="display: none;">
+							<font size="5px"></font>
+						</span>
+						<span id="taoshu" style="display: none;"></span>
+						<span id="bazhe2" style="display: none;"></span>
 					</div>
 				</div>
+				
 				<div class="bdbox">
-					<label class="bdxx"> <em>*</em>圣品
-					</label>
+					<label class="bdxx"> <em>*</em>圣品</label>
 					<div class="textbox">
 						<ul class="ordul2" id="yxsp">
 							<li name="selecteds"><a></a></li>
 						</ul>
 					</div>
 				</div>
+				
+				
 				<div class="bdbox">
-					<label class="bdxx"> <em>*</em>地区
-					</label>
+					<label class="bdxx"> <em>*</em>地区</label>
 					<div class="xlbox">
-						<select name="Province" id="Province" errorid="errorArea"
-							emp="true" des="地区" class="dqxl" style="width: 30%;">
-						</select> <select name="City" id="City" errorid="errorArea" emp="true"
-							class="dqxl" style="width: 30%;">
-						</select> <select name="County" id="County" errorid="errorArea" emp="true"
-							des="地区" class="dqxl" style="width: 29%;">
-						</select>
+						<select name="deliverProvince" 	id="deliverProvince" 	errorid="errorArea"	emp="true" 	des="地区" class="dqxl" style="width: 30%;" ></select> 
+						<select name="deliverCity" 		id="deliverCity" 		errorid="errorArea" emp="true" 	des="地区" class="dqxl" style="width: 30%;" ></select> 
+						<select name="deliverCounty" 	id="deliverCounty" 		errorid="errorArea" emp="true"	des="地区" class="dqxl" style="width: 30%;" data-rule-required="true" data-msg-required=" * 请选择地区"></select>
 					</div>
 					<script type="text/javascript">
-                    new InitPCA("Province", "City", "County", "", "", "");
-					 function rd(n, m) {
-                        var c = m - n + 1;
-                        return Math.floor(Math.random() * c + n);
-                    }
-
-                    $("#Num1").html(rd(168, 1000));
-                    $("#Num2").html(rd(168, 1000));
-                    $("#Num3").html(rd(168, 1000));
-                    $("#Num4").html(rd(168, 1000));
-                </script>
-
+	                    new InitPCA("deliverProvince", "deliverCity", "deliverCounty", "", "", "");
+						 function rd(n, m) {
+	                        var c = m - n + 1;
+	                        return Math.floor(Math.random() * c + n);
+	                    }
+	
+	                    $("#Num1").html(rd(168, 1000));
+	                    $("#Num2").html(rd(168, 1000));
+	                    $("#Num3").html(rd(168, 1000));
+	                    $("#Num4").html(rd(168, 1000));
+                	</script>
 				</div>
+				
 				<div class="bdbox">
-					<label class="bdxx"> <em>*</em>地址
-					</label>
+					<label class="bdxx"> <em>*</em>地址 </label>
 					<div class="textbox">
-						<input name="xSaddress" type="text" id="xSaddress" class="input" placeholder="XX镇XX街" />
+						<input name="deliverAdderss" type="text" id="xSaddress" class="input" placeholder="xx镇xx街" data-rule-required="true" data-msg-required=" * 请输入地址"/>
 					</div>
 				</div>
+				
 				<div class="bdbox">
-					<label class="bdxx"> <em>*</em>付款
-					</label>
+					<label class="bdxx"> <em>*</em>付款 </label>
 					<div class="dxbox">
 						<img src="images/hdfk.gif" />
 					</div>
 				</div>
+				
 				<div class="bdbox">
-					<label class="bdxx"> <em>*</em>时间
-					</label>
-					<div class="dxbox">
-						<select name="DropD_Time" id="DropD_Time">
-							<option value="请选择...">请选择...</option>
+					<label class="bdxx"> <em>*</em>时间 </label>
+					<div class="textbox">
+						<select name="deliverTime" id="DropD_Time" class="input">
 							<option value="上午(9点~12点)">上午(9点~12点)</option>
 							<option value="下午(12点~18点)">下午(12点~18点)</option>
 							<option value="09：00~10：00">09：00~10：00</option>
@@ -256,42 +272,42 @@
 							<option value="16：00~17：00">16：00~17：00</option>
 							<option value="17：00~18：00">17：00~18：00</option>
 							<option selected="selected" value="随时可以联系我">随时可以联系我</option>
-
 						</select>
 					</div>
 				</div>
+				
 				<div class="bdbox">
 					<label class="bdxx"> 留言</label>
 					<div class="text2box">
-						<textarea name="message" id="message" rows="5"
-							placeholder="如需奉请多尊,请在此处留言,谢谢！"></textarea>
-						<input type="hidden" name="qudao" id="qudao" value="">
+						<textarea name="customContent" id="message" rows="5" placeholder="如需奉请多尊,请在此处留言,谢谢！"></textarea>
 					</div>
 				</div>
+				
 				<div class="subbox">
-					<input type="submit" name="Button_Save" value="确认下单 (货到付款)"
-						onclick="ShowProgressBar();" id="Button_Save" name="btname" 
-						style="-webkit-appearance: none; appearance: none; -moz-appearance: none;" onsubmit="mySubmit();"/>
+					<input type="submit" name="Button_Save" value="确认下单 (货到付款)"  id="Button_Save" name="btname" style="-webkit-appearance: none; appearance: none; -moz-appearance: none;" onsubmit="mySubmit();"/>
 				</div>
-				<div id="divProgress"
-					style="text-align: center; display: none; position: fixed; top: 50%; left: 50%;">
-					<img id="imgLoading" src="images/loading.gif" /> <br /> <font
-						color="#1B3563" size="2px">数据提交中...请稍后！</font>
+				
+				<div id="divProgress" style="text-align: center; display: none; position: fixed; top: 50%; left: 50%;">
+					<img id="imgLoading" src="images/loading.gif" /> 
+					<br /> 
+					<font color="#1B3563" size="2px">数据提交中...请稍后！</font>
 				</div>
+				
 				<div id="divMaskFrame"
 					style="background-color: #F2F4F7; display: none; left: 0px; position: absolute; top: 0px;">
 				</div>
+				
 				<script type="text/javascript">
 				
 				 
-					
+				$().ready(function() {
+					  $("#ordeForm").validate();
+				});
 
 				
 				//提交
 				function mySubmit(){
-					// validate the comment form when it is submitted
 					return $("#ordeForm").validate();
-					
 				}
 				
                 // 顯示讀取遮罩
@@ -328,7 +344,9 @@
 			<div style="clear: both;"></div>
 		</div>
 	</div>
+	
 	<img src="images/dt_b.jpg" style="width: 100%">
+	
 	<script type="text/javascript">
         var not3chanpin = new Array("十二生肖本命佛");
         var not3yanse = new Array(" 肖鼠--黑曜石吊坠", " 肖牛--冰种黑曜石", " 肖虎--白玛瑙吊坠", " 肖兔--红玛瑙吊坠", " 肖龙--和田玉吊坠", " 肖蛇--和田青玉本命佛", " 肖马--黑曜石吊坠", " 肖羊--冰种黑曜石", " 肖猴--白玛瑙吊坠", " 肖鸡--和田玉吊坠", " 肖狗--和田青玉本命佛", " 肖猪--黑曜石吊坠");
