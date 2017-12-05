@@ -73,6 +73,9 @@
 				
 			id="ordeForm">
 			
+			
+				<input type="hidden" name="type" id="type" value="BMF"/>
+			
 				<input type="hidden" name="productId" id="Products" /> 
 				<input type="hidden" name="productPrices" id="Prices" />
 				
@@ -88,14 +91,14 @@
 				<div class="bdbox">
 					<label class="bdxx"> <em>*</em>姓名</label>
 					<div class="textbox">
-						<input name="customName"  id="name"  type="text" class="input"  data-rule-required="true" data-msg-required=" * 请输入姓名" />
+						<input name="customName"  id="name"  type="text" class="input"  data-rule-required="true" data-msg-required=" *    请输入姓名" />
 					</div>
 				</div>
 				
 				<div class="bdbox">
 					<label class="bdxx"> <em>*</em>手机</label>
 					<div class="textbox">
-						<input name="customMobile" id="tel"  type="text" class="input" data-rule-required="true" data-rule-mobile="true" data-msg-required=" * 请输入手机号" maxlength="11"/>
+						<input name="customMobile" id="tel"  type="text" class="input" data-rule-required="true" data-rule-mobile="false" data-msg-required=" *    请输入手机号" maxlength="11"/>
 					</div>
 				</div>
 				
@@ -107,7 +110,7 @@
 					<label class="bdxx"> <em>*</em>生肖</label>
 					<div class="textbox">
 						<select name="productBranch" id="DropDownListSX"
-							style="width: 90%;" class="dqxl" emp="true"  data-rule-required="true" data-msg-required=" * 请输选择生肖" >
+							style="width: 90%;" class="dqxl" emp="true"  data-rule-required="true" data-msg-required=" *    请输选择生肖" >
 							<option></option>
 							<option value="鼠">肖【鼠】本命佛--千手观音菩萨</option>
 							<option value="牛">肖【牛】本命佛--虚空藏菩萨</option>
@@ -170,7 +173,7 @@
 					</div>
 				</div>
 				
-				<input type="hidden" name="type" id="Url" />
+				<input type="hidden" name="customFrom" id="Url" />
 				
 				<script type="text/javascript">
 	                $(function () {
@@ -179,7 +182,6 @@
 	                    $("#Url").val(window.location.href);
 	                    
 	                })
-	                    
 	            </script>
 
 				<div class="bdbox" style="display: none;">
@@ -226,7 +228,7 @@
 					<div class="xlbox">
 						<select name="deliverProvince" 	id="deliverProvince" 	errorid="errorArea"	emp="true" 	des="地区" class="dqxl" style="width: 30%;" ></select> 
 						<select name="deliverCity" 		id="deliverCity" 		errorid="errorArea" emp="true" 	des="地区" class="dqxl" style="width: 30%;" ></select> 
-						<select name="deliverCounty" 	id="deliverCounty" 		errorid="errorArea" emp="true"	des="地区" class="dqxl" style="width: 30%;" data-rule-required="true" data-msg-required=" * 请选择地区"></select>
+						<select name="deliverCounty" 	id="deliverCounty" 		errorid="errorArea" emp="true"	des="地区" class="dqxl" style="width: 30%;" data-rule-required="true" data-msg-required=" *    请选择地区"></select>
 					</div>
 					<script type="text/javascript">
 	                    new InitPCA("deliverProvince", "deliverCity", "deliverCounty", "", "", "");
@@ -245,7 +247,7 @@
 				<div class="bdbox">
 					<label class="bdxx"> <em>*</em>地址 </label>
 					<div class="textbox">
-						<input name="deliverAdderss" type="text" id="xSaddress" class="input" placeholder="xx镇xx街" data-rule-required="true" data-msg-required=" * 请输入地址"/>
+						<input name="deliverAdderss" type="text" id="xSaddress" class="input" placeholder="xx镇xx街" data-rule-required="true" data-msg-required=" *    请输入地址"/>
 					</div>
 				</div>
 				
@@ -305,9 +307,35 @@
 				});
 
 				
+				
+
+ 
+				
+				
 				//提交
 				function mySubmit(){
-					return $("#ordeForm").validate();
+					if( $("#ordeForm").validate()){
+						
+						
+						$("#ordeForm").ajaxForm({
+							success:function(data){
+								alert('下单成功');
+							}
+						});
+
+						$('#ordeForm').submit(function() {
+						   
+							$(this).ajaxSubmit({
+								success:function(data){
+									alert('下单成功');
+								}
+							});
+						   
+						    return false; //阻止表单默认提交
+						    
+						});
+						
+					}
 				}
 				
                 // 顯示讀取遮罩
