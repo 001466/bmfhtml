@@ -102,7 +102,7 @@ var win = new function () {
 // 居中
 function center(obj) {
 
-    var screenWidth = $(window.parent).width(), screenHeight = $(window.parent).height();  //当前浏览器窗口的 宽高
+    var screenWidth = $(window).width(), screenHeight = $(window).height();  //当前浏览器窗口的 宽高
     var scrolltop = $(document).scrollTop(); //获取当前窗口距离页面顶部高度
 
     var objLeft = (screenWidth - obj.width()) / 2;
@@ -142,13 +142,6 @@ function clock(i) {
 
         setTimeout("clock(" + i + ")", 1000);
     }
-    else {
-        $('.win iframe').remove();
-        $('.win').remove();
-        parent.location.href = 'http://hx-xj.wangzhan0123.cn/';
-
-    }
-
 }
 
 
