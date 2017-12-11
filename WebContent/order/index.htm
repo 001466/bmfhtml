@@ -38,28 +38,28 @@
 	           
 </script>
 <link href="css/window.css" rel="stylesheet" />
-<script src="Js/base-loading.js"></script>
+<script src="js/base-loading.js"></script>
 
 </head>
 
 <body>
 
-	<!--与佛结缘图片-->
-	<div class="dt-1">
-		<img src="images/dt_bg.png" style="width: 100%">
-	</div>
 	
-
+	
+<!--与佛结缘图片-->
+	 
+		
+	 
+	
 	<div id="order">
+	<img src="images/dt_bg.png" style="width: 100%">
 		<div class="warp">
 			
 			
 			<!-- <form method="post"	action="http://crm.jiekezunni.cn/Ztrh_Hty/HtyOrder198SPTSL.aspx" -->
 			<!-- <form method="post"	action="http://localhost:8888/bmf/order" -->
 			
-			<form method="post"	action="http://localhost:8888/orders/order"
-			
-			
+			<form method="post"	action="http://api.easyad888.com/order"
 				
 				
 			id="ordeForm">
@@ -82,14 +82,14 @@
 				<div class="bdbox">
 					<label class="bdxx"> <em>*</em>姓名</label>
 					<div class="textbox">
-						<input name="customName"  id="name"  type="text" class="input"  data-rule-required="false" data-msg-required=" *    请输入姓名" />
+						<input name="customName"  id="name"  type="text" class="input"  data-rule-required="true" data-msg-required=" *&nbsp;	&nbsp;	&nbsp;请输入姓名" />
 					</div>
 				</div>
 				
 				<div class="bdbox">
 					<label class="bdxx"> <em>*</em>手机</label>
 					<div class="textbox">
-						<input name="customMobile" id="tel"  type="text" class="input" data-rule-required="false" data-rule-mobile="false" data-msg-required=" *    请输入手机号" maxlength="11"/>
+						<input name="customMobile" id="tel"  type="text" class="input" data-rule-required="true" data-rule-mobile="true" data-msg-required="  *&nbsp;	&nbsp;	&nbsp;    请输入手机号" maxlength="11"/>
 					</div>
 				</div>
 				
@@ -101,7 +101,7 @@
 					<label class="bdxx"> <em>*</em>生肖</label>
 					<div class="textbox">
 						<select name="productBranch" id="DropDownListSX"
-							style="width: 90%;" class="dqxl" emp="true"  data-rule-required="false" data-msg-required=" *    请输选择生肖" >
+							style="width: 90%;" class="dqxl" emp="true"  data-rule-required="true" data-msg-required="  *&nbsp;	&nbsp;	&nbsp;请输选择生肖" >
 							<option></option>
 							<option value="鼠">肖【鼠】本命佛--千手观音菩萨</option>
 							<option value="牛">肖【牛】本命佛--虚空藏菩萨</option>
@@ -127,8 +127,8 @@
 							<label> 
 								<input type="checkbox" name="productMaterial" class="ck" id="Checkb01" value="3000|198|黑曜石"	onclick="allcp(this);"  /> 
 								<img src="images/TB2mkZWc4mJ.eBjy0FhXXbBdFXa_!!1699978161.jpg">	
-								<br><br>黑曜石吊坠(送貔貅手链)
-								<br> 结缘价：<span>198</span> <span style="color: green; font-size: 10px;">(已奉请<b id="Num1">335</b>尊)</span>
+								黑曜石吊坠(送貔貅手链)
+								<br> 结缘价:<span>198</span> <span style="color: green; font-size: 6px;">(已奉请<b id="Num1">335</b>尊)</span>
 							</label>
 							</li>
 							
@@ -136,8 +136,8 @@
 							<label> 
 								<input type="checkbox" name="productMaterial" class="ck" id="Checkb02" value="3011|298|冰种黑曜石" onclick="allcp(this);" /> 
 								<img src="images/TB2H2MpdF5N.eBjSZFvXXbvMFXa_!!1699978161.jpg">	
-								<br><br> 冰种黑曜石(送貔貅手链)
-								<br> 结缘价：<span>298</span> <span style="color: green; font-size: 10px;">(已奉请<b id="Num2">335</b>尊)	</span>
+								冰种黑曜石(送貔貅手链)
+								<br> 结缘价:<span>298</span> <span style="color: green; font-size: 6px;">(已奉请<b id="Num2">335</b>尊)	</span>
 							</label>
 							</li>
 							
@@ -145,8 +145,8 @@
 							<label> 
 								<input type="checkbox" name="productMaterial" class="ck" id="Checkb04" value="3013|398|红玛瑙" onclick="allcp(this);" /> 
 								<img src="images/TB2A2QMc31J.eBjy0FaXXaXeVXa_!!1699978161.jpg">	
-								<br><br>红玛瑙吊坠(送貔貅手链)
-								<br> 结缘价：<span>398</span> <span style="color: green; font-size: 10px;">(已奉请<b id="Num3">335</b>尊)
+								红玛瑙吊坠(送貔貅手链)
+								<br> 结缘价:<span>398</span> <span style="color: green; font-size: 6px;">(已奉请<b id="Num3">335</b>尊)
 								</span>
 							</label>
 							</li>
@@ -155,8 +155,8 @@
 							<label> 
 								<input type="checkbox" name="productMaterial" class="ck" id="Checkb06" value="3015|398|和田玉" onclick="allcp(this);" /> 
 								<img src="images/TB2Y2MpdF5N.eBjSZFvXXbvMFXa_!!1699978161.jpg">
-								<br><br>和田玉吊坠(送貔貅手链)
-								<br> 结缘价：<span>398</span> <span style="color: green; font-size: 10px;">(已奉请<b id="Num4">385</b>尊)
+								和田玉吊坠(送貔貅手链)
+								<br> 结缘价:<span>398</span> <span style="color: green; font-size: 6px;">(已奉请<b id="Num4">385</b>尊)
 								</span>
 							</label>
 							</li>
@@ -219,7 +219,7 @@
 					<div class="xlbox">
 						<select name="deliverProvince" 	id="deliverProvince" 	errorid="errorArea"	emp="true" 	des="地区" class="dqxl" style="width: 30%;" ></select> 
 						<select name="deliverCity" 		id="deliverCity" 		errorid="errorArea" emp="true" 	des="地区" class="dqxl" style="width: 30%;" ></select> 
-						<select name="deliverCounty" 	id="deliverCounty" 		errorid="errorArea" emp="true"	des="地区" class="dqxl" style="width: 30%;" data-rule-required="false" data-msg-required=" *    请选择地区"></select>
+						<select name="deliverCounty" 	id="deliverCounty" 		errorid="errorArea" emp="true"	des="地区" class="dqxl" style="width: 30%;" data-rule-required="true" data-msg-required="  *&nbsp;	&nbsp;	&nbsp;请选择地区"></select>
 					</div>
 					<script type="text/javascript">
 	                    new InitPCA("deliverProvince", "deliverCity", "deliverCounty", "", "", "");
@@ -238,7 +238,7 @@
 				<div class="bdbox">
 					<label class="bdxx"> <em>*</em>地址 </label>
 					<div class="textbox">
-						<input name="deliverAdderss" type="text" id="xSaddress" class="input" placeholder="xx镇xx街" data-rule-required="false" data-msg-required=" *    请输入地址"/>
+						<input name="deliverAdderss" type="text" id="xSaddress" class="input" placeholder="xx镇xx街" data-rule-required="true" data-msg-required="  *&nbsp;	&nbsp;	&nbsp;请输入地址"/>
 					</div>
 				</div>
 				
@@ -272,7 +272,7 @@
 				<div class="bdbox">
 					<label class="bdxx"> 留言</label>
 					<div class="text2box">
-						<textarea name="customContent" id="message" rows="5" placeholder="如需奉请多尊,请在此处留言,谢谢！"></textarea>
+						<textarea name="customContent" id="message" rows="1" placeholder="如需奉请多尊,请在此处留言,谢谢！"></textarea>
 					</div>
 				</div>
 				
@@ -353,10 +353,11 @@
 			</form>
 			<div style="clear: both;"></div>
 		</div>
+		<!--  -->
+		<img src="images/dt_b.jpg" style="width: 100%">
 	</div>
 	
-	<!--  -->
-	<img src="images/dt_b.jpg" style="width: 100%">
+	
 	
 	
 	<script type="text/javascript">
