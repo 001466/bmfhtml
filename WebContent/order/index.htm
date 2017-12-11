@@ -307,7 +307,14 @@
 							        crossDomain: true,
 							        success  : function(data) {  
 							        	
-							        	win.alert('恭喜','奉请成功',true);
+							        	var jsondata = $.parseJSON(data);
+							        	
+							        	if(jsondata.errorCode==0)
+							        		win.alert('恭喜','奉请成功',true);
+							        	else if(jsondata.errorCode==101)
+							        		win.alert('抱谦','今天已超过献请上限，请明天再试！',true);
+							        	else
+							        		win.alert('抱谦',jsondata.message,true);
 							        } 
 								}); 
 						  }  
