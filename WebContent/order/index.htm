@@ -307,13 +307,19 @@
 							        crossDomain: true,
 							        success  : function(data) {  
 							        	
-							        	var jsondata = $.parseJSON(data);
+							        	var jsondata=null;
+							        	try {  
+							        		jsondata=$.parseJSON(data);  
+							            } catch (e) {  
+							            	jsondata=data;  
+							            }  
 							        	
-							        	if(jsondata.errorCode==0)
+
+							        	if(jsondata.errorCode==0){
 							        		win.alert('恭喜','奉请成功',true);
-							        	else if(jsondata.errorCode==101)
+							        	}else if(jsondata.errorCode==101){
 							        		win.alert('抱谦','今天已超过献请上限，请明天再试！',true);
-							        	else
+							        	}else
 							        		win.alert('抱谦',jsondata.message,true);
 							        } 
 								}); 
