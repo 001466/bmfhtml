@@ -14,10 +14,8 @@
 
 <title>本命佛订单</title>
 
- <link rel="stylesheet" href="css/qdwap.css" />
-
+<link rel="stylesheet" href="css/bootstrap.css" />
 <link rel="stylesheet" href="css/cmxform.css" />
-
 
 <link rel="stylesheet" href="css/window.css"  />
 <link rel="stylesheet" href="css/latestorder.css"  />
@@ -116,6 +114,7 @@ var scrollComment = function(){
 		<!-- <form method="post"	action="http://localhost:8888/bmf/order" -->
 		
 		<form method="post"	action="http://api.easyad888.com/order"
+		class="bootstrap-frm"
 			
 			
 		id="ordeForm">
@@ -136,37 +135,30 @@ var scrollComment = function(){
             </script>
             
 			
-			<div class="bdbox">
-				<label class="bdxx"> <em>*</em>注意
-				</label>
-				<div class="dxbox red">
-					<label> 同一生肖奉请多尊请留言备注</label><br>
-				</div>
-			</div>
-			
-			<!--附加属性e-->
-			<div class="bdbox">
-				<label class="bdxx"> <em>*</em>姓名</label>
-				<div class="textbox">
-					<input name="customName"  id="name"  type="text" class="input"  data-rule-required="false" data-msg-required=" *&nbsp;	&nbsp;	&nbsp;请输入姓名" />
-				</div>
-			</div>
-			
-			<div class="bdbox">
-				<label class="bdxx"> <em>*</em>手机</label>
-				<div class="textbox">
-					<input name="customMobile" id="tel"  type="text" class="input" data-rule-required="false" data-rule-mobile="true" data-msg-required="  *&nbsp;	&nbsp;	&nbsp;    请输入手机号" maxlength="11"/>
-				</div>
-			</div>
+				 
+					
+					 
+					
+					<div>
+					<span><em>*</em>姓名 :</span>
+					<input name="customName"     type="text"   data-rule-required="false" data-msg-required=" *&nbsp;	&nbsp;	&nbsp;请输入姓名" />
+					</div>
 			
 			
-			 
-						
-			<!--附加属性b-->
-			<div class="bdbox">
-				<label class="bdxx"> <em>*</em>生肖</label>
-				<div class="textbox">
-					<select name="productBranch" id="DropDownListSX"  class="dqxl" emp="true"  data-rule-required="false" data-msg-required="  *&nbsp;	&nbsp;	&nbsp;请输选择生肖" >
+					<div>
+					<span><em>*</em>手机 :</span>
+					<input name="customMobile"    type="text" class="input" data-rule-required="false" data-rule-mobile="true" data-msg-required="  *&nbsp;	&nbsp;	&nbsp;    请输入手机号" maxlength="11"/>
+					</div>
+			
+					
+					
+					
+					 
+			
+					
+					<div>
+					<span><em>*</em>生肖 :</span>
+					<select name="productBranch"   data-rule-required="false" data-msg-required="  *&nbsp;	&nbsp;	&nbsp;请输选择生肖" >
 						<option></option>
 						<option value="鼠">肖【鼠】本命佛--千手观音菩萨</option>
 						<option value="牛">肖【牛】本命佛--虚空藏菩萨</option>
@@ -181,16 +173,17 @@ var scrollComment = function(){
 						<option value="狗">肖【狗】本命佛--阿弥陀佛</option>
 						<option value="猪">肖【猪】本命佛--阿弥陀佛</option>
 					</select>
-				</div>
-			</div>
+					</div>
 			
-			<div class="bdbox">
-				<label class="bdxx"> <em>*</em>圣品</label>
-				<div class="dxbox red">
-					<ul class="ordul" id="ordul">
+			
+			 		<div>
+					<span><em>*</em>圣品 :</span>
+					
+					
+						<ul  id="productlist" class="productlist">
 						<li>
 						<label> 
-							<input type="checkbox" name="productMaterial" class="ck" id="Checkb01" value="3000|198|黑曜石"	onclick="allcp(this);"  /> 
+							<input type="checkbox" name="productMaterial" class="ck"  value="3000|198|黑曜石"	onclick="allcp(this);"  /> 
 							<img src="images/TB2mkZWc4mJ.eBjy0FhXXbBdFXa_!!1699978161.jpg"/>	
 							黑曜石吊坠(送貔貅手链)
 							<br/> 结缘价:<span>198</span> <span style="color: green; font-size: 6px;">(已奉请<b id="Num1">335</b>尊)</span>
@@ -199,7 +192,7 @@ var scrollComment = function(){
 						
 						<li>
 						<label> 
-							<input type="checkbox" name="productMaterial" class="ck" id="Checkb02" value="3011|298|冰种黑曜石" onclick="allcp(this);" /> 
+							<input type="checkbox" name="productMaterial" class="ck"   value="3011|298|冰种黑曜石" onclick="allcp(this);" /> 
 							<img src="images/TB2H2MpdF5N.eBjSZFvXXbvMFXa_!!1699978161.jpg"/>	
 							冰种黑曜石(送貔貅手链)
 							<br/> 结缘价:<span>298</span> <span style="color: green; font-size: 6px;">(已奉请<b id="Num2">335</b>尊)	</span>
@@ -208,7 +201,7 @@ var scrollComment = function(){
 						
 						<li>
 						<label> 
-							<input type="checkbox" name="productMaterial" class="ck" id="Checkb04" value="3013|398|红玛瑙" onclick="allcp(this);" /> 
+							<input type="checkbox" name="productMaterial" class="ck"   value="3013|398|红玛瑙" onclick="allcp(this);" /> 
 							<img src="images/TB2A2QMc31J.eBjy0FaXXaXeVXa_!!1699978161.jpg"/>	
 							红玛瑙吊坠(送貔貅手链)
 							<br/> 结缘价:<span>398</span> <span style="color: green; font-size: 6px;">(已奉请<b id="Num3">335</b>尊)
@@ -218,16 +211,17 @@ var scrollComment = function(){
 						
 						<li>
 						<label> 
-							<input type="checkbox" name="productMaterial" class="ck" id="Checkb06" value="3015|398|和田玉" onclick="allcp(this);" /> 
+							<input type="checkbox" name="productMaterial" class="ck"   value="3015|398|和田玉" onclick="allcp(this);" /> 
 							<img src="images/TB2Y2MpdF5N.eBjSZFvXXbvMFXa_!!1699978161.jpg"/>
 							和田玉吊坠(送貔貅手链)
 							<br/> 结缘价:<span>398</span> <span style="color: green; font-size: 6px;">(已奉请<b id="Num4">385</b>尊)
 							</span>
 						</label>
 						</li>
-					</ul>
-				</div>
-			</div>
+						</ul>
+					  </div>
+			
+			 
 			
 			
 			
@@ -237,16 +231,82 @@ var scrollComment = function(){
                     return Math.floor(Math.random() * c + n);
                 }
                 $(function () {
-                    $("#ordul").find("input:checkbox").eq(2).click();
-                    $("#Num1").html(rd(168, 1000));
-                    $("#Num2").html(rd(168, 1000));
-                    $("#Num3").html(rd(168, 1000));
-                    $("#Num4").html(rd(168, 1000));
+                    $("#productlist").find("input:checkbox").eq(2).click();
+                    $("#Num1").html(rd(168, 999));
+                    $("#Num2").html(rd(168, 999));
+                    $("#Num3").html(rd(168, 999));
+                    $("#Num4").html(rd(168, 999));
                 })
             </script>
+            
+            
+             
+			
+			<div>
+			<span><em>*</em>金额 :</span>
+			<p>0元&nbsp;</p>
+			</div>
+			
+			<div>
+				<span> 圣品  &nbsp;	</span>
+				<ul id="product-selected">
+						<li name="product-selected"><a></a></li>
+				</ul>	
+			</div>
 
+			<div>
+				<span> <em>*</em>地区:	</span>
+				
+				<select name="deliverProvince" 	id="deliverProvince"    style="width: 20%;" ></select> 
+				<select name="deliverCity" 		id="deliverCity" 		style="width: 22.8%;" ></select> 
+				<select name="deliverCounty" 	id="deliverCounty" 		style="width: 26.4%;" data-rule-required="false" data-msg-required="  *&nbsp;	&nbsp;	&nbsp;请选择地区"></select>
+				 
+				 <script type="text/javascript">
+                    new InitPCA("deliverProvince", "deliverCity", "deliverCounty", "", "", "");
+               	</script>
+			</div>
+			
+			
+			
+			<div>
+			<span><em>*</em>地址 :</span>
+			<input name="deliverAdderss" type="text" id="xSaddress" class="input" placeholder="xx镇xx街" data-rule-required="false" data-msg-required="  *&nbsp;	&nbsp;	&nbsp;请输入地址"/>
+			</div>
 
-			<div class="bdbox" style="display: none;">
+			<div>
+			<span><em>*</em>付款 :</span>
+			<p>
+			<img src="images/hdfk.gif" />
+			</p>
+			</div>
+				
+			<div>
+			<span><em>*</em>时间 :</span>
+			<select name="deliverTime" id="DropD_Time" class="dqxl" emp="true">
+						<option value="上午(9点~12点)">上午(9点~12点)</option>
+						<option value="下午(12点~18点)">下午(12点~18点)</option>
+						<option value="09：00~10：00">09：00~10：00</option>
+						<option value="10：00~11：00">10：00~11：00</option>
+						<option value="11：00~12：00">11：00~12：00</option>
+						<option value="12：00~13：00">12：00~13：00</option>
+						<option value="13：00~14：00">13：00~14：00</option>
+						<option value="14：00~15：00">14：00~15：00</option>
+						<option value="15：00~16：00">15：00~16：00</option>
+						<option value="16：00~17：00">16：00~17：00</option>
+						<option value="17：00~18：00">17：00~18：00</option>
+						<option selected="selected" value="随时可以联系我">随时可以联系我</option>
+				</select>
+				</div>
+			 
+			
+			 <div>
+			<span><em></em>留言 :</span>
+					<textarea name="customContent" id="message" rows="1" placeholder="如需奉请多尊,请在此处留言,谢谢！"></textarea>
+			</div>
+			
+			 
+
+			<!-- <div class="bdbox" style="display: none;">
 				<label class="bdxx" style="color: Red; padding-right: 0;">
 					<img src="images/99.gif" width="60px"/> 
 					<br /> 限量抢
@@ -261,7 +321,9 @@ var scrollComment = function(){
 							</li>
 						</ul>
 				</div>
-			</div>
+			</div> -->
+			
+			<!-- 
 			
 			<div class="bdbox">
 				<label class="bdxx"> <em>*</em>金额 </label>
@@ -340,7 +402,7 @@ var scrollComment = function(){
 			
 			<div class="subbox">
 				<input type="submit" value="确认下单 (佛到付款)"  style="-webkit-appearance: none; appearance: none; -moz-appearance: none;"/>
-			</div>
+			</div> -->
 			
 			
 			

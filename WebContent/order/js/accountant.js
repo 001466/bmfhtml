@@ -50,6 +50,8 @@ function mone(thid, che, totalMoney) {
 }
 
 function allcp(thid) {
+	
+	 
 
     vals = thid.value.split("|");
 
@@ -75,9 +77,12 @@ function allcp(thid) {
         }
 
     }
+    
+    
+   
     $("#Prices").val(totalMoney);
 
-    var yxsp = document.getElementById("yxsp");
+    var selected = document.getElementById("product-selected");
 
     var yxsp_li = document.createElement("li");
 
