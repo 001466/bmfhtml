@@ -441,16 +441,35 @@ article~div.btn { padding-top:0px;}
 .copy {font-size:12px;text-align:center;}
 
 
-input,select,textarea{width:200px; font:100% Microsoft YaHei,\5FAE\8F6F\96C5\9ED1,SimSun,\5B8B\4F53,Arial,Verdana;}em{font-style:normal;color:#F00;margin-right:5px;}img{border:0 none;vertical-align:middle;}.red{color:#F00;}#order{margin:0 auto;}.warp{border-left: 2px solid #c70304;border-right: 2px solid #c70304;width:auto;/*height:100%;*/}.title{height:36px;line-height:36px;color:#FFF;font-size:18px;vertical-align:middle;margin-bottom:10px;padding-left:8px;}.warp label.bdxx{float:left;display:inline;overflow:hidden;width:23%;_width:22%;text-align:right;padding-right:2%;}.warp label.bdxxcp{float:left;display:block;width:95%;height:20px;line-height:20px;padding-left:5%;}.dxbox,.xlbox,.textbox,.text2box,.text3box{float:left;display:inline;overflow:hidden;width:74%;}.dxboxcp{float:left;display:block;width:85%;padding:0 5% 0 10%;margin-top:8px;font-weight:bold;font-size:14px;line-height:1.7em;}.dxbox,.text2box,.text3box{line-height:1.5em;}.bdbox{float:left;width:100%;margin-bottom:10px;*margin-bottom:7px;}.dxboxcp label{margin-left:6px;cursor:pointer;}.dxbox label{margin-left:6px;margin-right:4px;cursor:pointer;}.textbox input{width:90%;font-size:16px;color:#666;padding:3px 5px;_padding:2px 5px;}.text3box #showprice{clear:both;display:inline;font-family:Arial,Verdana;font-size:14px;font-weight:bold;color:#F60;margin:0 5px;}.xlbox select.cpxl{font-size:16px;width:96%;height:28px;border:1px solid #a0a0a0;background:#FCFCFC;}.xlbox select.dqxl{width:30.15%;height:26px;border:1px solid #a0a0a0;}.text2box textarea{width:90%;height:71px;padding:4px 5px;background:#FFF;}.text3box input{font:16px Arial;color:#666;font-weight:bold;text-align:center;vertical-align:middle;margin-right:8px;padding:4px 5px 3px;background:#FFF;}.text3box .code{width:100px;height:29px;}.text3box a{font-size:12px;margin-left:6px;}.subbox{width:100%;float:left;text-align:center;padding-bottom:10px;}.subbox input{width:200px;height:36px;line-height:36px;color:#FFF;font-size:18px;vertical-align:middle;cursor:pointer;border:0;}#fahuo{width:100%;font-size:12px;line-height:200%;background:#EFEFEF;text-align:left;border-top:1px solid #DDDDDD;}#fahuo ul{padding:10px;height:50%;overflow:hidden;}#fahuo span{color:#0C3;}
-
-  #order{width:100%;#fcfcfc;padding-top:20px;}
+input,select,textarea{width:200px; font:100% Microsoft YaHei,\5FAE\8F6F\96C5\9ED1,SimSun,\5B8B\4F53,Arial,Verdana;}
+em{font-style:normal;color:#F00;margin-right:5px;}img{border:0 none;vertical-align:middle;}
+.red{color:#F00;}
+#order{margin:0 auto;}.warp{border-left: 2px solid #c70304;border-right: 2px solid #c70304;width:auto;/*height:100%;*/}
+.title{height:36px;line-height:36px;color:#FFF;font-size:18px;vertical-align:middle;margin-bottom:10px;padding-left:8px;}
+.warp label.bdxx{float:left;display:inline;overflow:hidden;width:23%;_width:22%;text-align:right;padding-right:2%;}
+.warp label.bdxxcp{float:left;display:block;width:95%;height:20px;line-height:20px;padding-left:5%;}
+.dxbox,.xlbox,.textbox,.text2box,.text3box{float:left;display:inline;overflow:hidden;width:74%;}
+.dxboxcp{float:left;display:block;width:85%;padding:0 5% 0 10%;margin-top:8px;font-weight:bold;font-size:14px;line-height:1.7em;}
+.dxbox,.text2box,.text3box{line-height:1.5em;}.bdbox{float:left;width:100%;margin-bottom:10px;*margin-bottom:7px;}
+.dxboxcp label{margin-left:6px;cursor:pointer;}.dxbox label{margin-left:6px;margin-right:4px;cursor:pointer;}
+.textbox input{width:90%;font-size:16px;color:#666;padding:3px 5px;_padding:2px 5px;}
+.text3box #showprice{clear:both;display:inline;font-family:Arial,Verdana;font-size:14px;font-weight:bold;color:#F60;margin:0 5px;}
+.xlbox select.cpxl{font-size:16px;width:96%;height:28px;border:1px solid #a0a0a0;background:#FCFCFC;}
+.xlbox select.dqxl{width:30.15%;height:26px;border:1px solid #a0a0a0;}
+.text2box textarea{width:90%;height:71px;padding:4px 5px;background:#FFF;}
+.text3box input{font:16px Arial;color:#666;font-weight:bold;text-align:center;vertical-align:middle;margin-right:8px;padding:4px 5px 3px;background:#FFF;}
+.text3box .code{width:100px;height:29px;}.text3box a{font-size:12px;margin-left:6px;}.subbox{width:100%;float:left;text-align:center;padding-bottom:10px;}
+.subbox input{width:200px;height:36px;line-height:36px;color:#FFF;font-size:18px;vertical-align:middle;cursor:pointer;border:0;}
+ #order{width:100%;#fcfcfc;padding-top:20px;}
   	 			.order{ float:left; margin-left:8px;}
 			.order input{ margin-bottom:15px; display:inline-block}
 			.order span{ margin-left:8px; width:85%;}
 			.kk{ display:inline-block; float:left;}
 			.kk1{ display:inline-block; float:right; text-align:left; width:50%}
 
-  .subbox input{
+
+
+.subbox input{
 
 background-color: #ff5600;
 
@@ -689,70 +708,6 @@ fieldset {
 #page{max-width:700px; }
 
 
-
-.comment-title{
-
-	width: 100%;
-
-	height: 32px;
-
-	line-height: 32px;
-
-	background-color: #e8373c;
-
-	color: #ffffff;
-
-	font-size: 14px;
-
-	text-align: center;
-
-}
-
-.comment{
-
-	width: 100%;
-
-	height: 360px;
-
-	margin-top: 10px;
-
-	margin-bottom: 0px;
-
-	overflow: hidden;
-
-}
-
-.comment-inner{
-
-	width: 100%;
-
-}
-
-.comment-name{
-
-	line-height: 25px;
-
-	color: #e8373c;
-
-	margin-left: 10px;
-
-	font-size: 14px;
-
-}
-
-.comment-content{
-
-	line-height: 25px;
-
-	margin-left: 10px;
-
-	font-size: 14px;
-
-	color: #666666;
-
-	border-bottom: 1px dotted #cccccc;
-
-}
 
 
 

@@ -1,0 +1,8 @@
+a,a:visited { text-decoration:none;}ul,ol,li { list-style:none;}
+html,body,header,nav,footer,article,section,form,fieldset,p,div,ul,ol,li,h1,h2,h3,h4,h5,h6 {-webkit-text-size-adjust:none;} /*改变文字大小*/
+
+
+
+#latestorder{width:100%;font-size:12px;line-height:200%;background:#EFEFEF;text-align:left;border-top:1px solid #DDDDDD;}
+#latestorder ul{padding:10px;height:50%;overflow:hidden;}
+#latestorder span{color:#0C3;}

@@ -2,9 +2,9 @@
 
 var ZProvince = "";//省份
 
-var ZCity = "";//城市
+var ZCity 	  = "";//城市
 
-var ZArea = "";//地区
+var ZArea     = "";//地区
 
 var ZShowTips = 1;
 
