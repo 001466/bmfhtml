@@ -11,6 +11,7 @@
 <meta content="black" name="apple-mobile-web-app-status-bar-style" />
 <meta content="320" name="MobileOptimized" />
 <meta content="telephone=no" name="format-detection" />
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
 
 <title>本命佛订单</title>
 
@@ -183,7 +184,7 @@ var scrollComment = function(){
 						<ul  id="productlist" class="productlist">
 						<li>
 						<label> 
-							<input type="checkbox" name="productMaterial" class="ck"  value="3000|198|黑曜石"	onclick="allcp(this);"  /> 
+							<input type="checkbox" name="productMaterial" class="ck"  value="198|黑曜石"	onclick="allcp(this);"  /> 
 							<img src="images/TB2mkZWc4mJ.eBjy0FhXXbBdFXa_!!1699978161.jpg"/>	
 							黑曜石吊坠(送貔貅手链)
 							<br/> 结缘价:<span>198</span> <span style="color: green; font-size: 6px;">(已奉请<b id="Num1">335</b>尊)</span>
@@ -192,7 +193,7 @@ var scrollComment = function(){
 						
 						<li>
 						<label> 
-							<input type="checkbox" name="productMaterial" class="ck"   value="3011|298|冰种黑曜石" onclick="allcp(this);" /> 
+							<input type="checkbox" name="productMaterial" class="ck"   value="298|冰种黑曜石" onclick="allcp(this);" /> 
 							<img src="images/TB2H2MpdF5N.eBjSZFvXXbvMFXa_!!1699978161.jpg"/>	
 							冰种黑曜石(送貔貅手链)
 							<br/> 结缘价:<span>298</span> <span style="color: green; font-size: 6px;">(已奉请<b id="Num2">335</b>尊)	</span>
@@ -201,7 +202,7 @@ var scrollComment = function(){
 						
 						<li>
 						<label> 
-							<input type="checkbox" name="productMaterial" class="ck"   value="3013|398|红玛瑙" onclick="allcp(this);" /> 
+							<input type="checkbox" name="productMaterial" class="ck"   value="398|红玛瑙" onclick="allcp(this);" /> 
 							<img src="images/TB2A2QMc31J.eBjy0FaXXaXeVXa_!!1699978161.jpg"/>	
 							红玛瑙吊坠(送貔貅手链)
 							<br/> 结缘价:<span>398</span> <span style="color: green; font-size: 6px;">(已奉请<b id="Num3">335</b>尊)
@@ -211,10 +212,10 @@ var scrollComment = function(){
 						
 						<li>
 						<label> 
-							<input type="checkbox" name="productMaterial" class="ck"   value="3015|398|和田玉" onclick="allcp(this);" /> 
+							<input type="checkbox" name="productMaterial" class="ck"   value="398|和田玉" onclick="allcp(this);" /> 
 							<img src="images/TB2Y2MpdF5N.eBjSZFvXXbvMFXa_!!1699978161.jpg"/>
 							和田玉吊坠(送貔貅手链)
-							<br/> 结缘价:<span>398</span> <span style="color: green; font-size: 6px;">(已奉请<b id="Num4">385</b>尊)
+							<br/> 结缘价:<span>398</span> <span style="color: green; font-size: 1px;">(已奉请<b id="Num4">385</b>尊)
 							</span>
 						</label>
 						</li>
@@ -249,8 +250,7 @@ var scrollComment = function(){
 			
 			<div>
 				<span> 圣品  &nbsp;	</span>
-				<ul id="product-selected">
-						<li name="product-selected"><a></a></li>
+				<ul id="productSelected">
 				</ul>	
 			</div>
 
@@ -282,7 +282,7 @@ var scrollComment = function(){
 				
 			<div>
 			<span><em>*</em>时间 :</span>
-			<select name="deliverTime" id="DropD_Time" class="dqxl" emp="true">
+			<select name="deliverTime">
 						<option value="上午(9点~12点)">上午(9点~12点)</option>
 						<option value="下午(12点~18点)">下午(12点~18点)</option>
 						<option value="09：00~10：00">09：00~10：00</option>

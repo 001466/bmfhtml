@@ -49,10 +49,21 @@ function mone(thid, che, totalMoney) {
 
 }
 
+
+ 
+
+
 function allcp(thid) {
-	
 	 
 
+	 if (thid.checked == true) {
+		 thid.parentNode.className = "redboder";
+	 }else{
+		 thid.parentNode.className = "";
+	 }
+	
+	 return ;
+	 
     vals = thid.value.split("|");
 
     var che = 0;
@@ -62,15 +73,14 @@ function allcp(thid) {
     var prdAttr = 0;
 
     jncheck = 0;
-    //alert($("input:checkbox").prop("name").length);
-    //alert($("input[name='checkb']").length);
+    
     for (var i = 0; i < $(".ck").length; i++) {
 
         if ($(".ck")[i].checked == true) {
 
             prdAttr = $(".ck")[i].value.split("|");
 
-            totalMoney = Number(totalMoney) + Number(prdAttr[1]);
+            totalMoney = Number(totalMoney) + Number(prdAttr[0]);
 
             che++
 
@@ -82,43 +92,27 @@ function allcp(thid) {
    
     $("#Prices").val(totalMoney);
 
-    var selected = document.getElementById("product-selected");
+    var selectedUl = document.getElementById("productSelected");
 
-    var yxsp_li = document.createElement("li");
+    var li = document.createElement("li");
 
-    var yxsp_a = document.createElement("a");
+    var a = document.createElement("a");
 
-    yxsp_li.appendChild(yxsp_a);
+    li.appendChild(a);
 
-    /*if (thid.parentNode.className=="")
-
-    {
-
-    thid.parentNode.className = "leb_xz";
-
-    }
-
-    else
-
-    {
-
-    thid.parentNode.className = "";
-
-    }*/
+    
 
     if (thid.checked == true) {
 
-        yxsp_a.innerHTML = vals[2];
+    	a.innerHTML = vals[1];
 
-        yxsp.appendChild(yxsp_li);
-
-        thid.parentNode.className = "leb_xz";
+    	selectedUl.appendChild(li);
 
     }
 
     else {
 
-        var as = yxsp.getElementsByTagName("li");
+        var as = selectedUl.getElementsByTagName("li");
 
         thid.parentNode.className = "";
 
@@ -126,7 +120,7 @@ function allcp(thid) {
 
             var txt = as[i].innerText || as[i].textContent;
 
-            if (txt === vals[2]) {
+            if (txt === vals[1]) {
 
                 as[i].parentNode.removeChild(as[i])
 
@@ -138,7 +132,7 @@ function allcp(thid) {
 
     var pd = "";
     var i = 0;
-    $('#yxsp li a').each(function () {
+    $('#productSelected li a').each(function () {
         if (i == 0) {
             pd += $(this).html()
         }
@@ -152,8 +146,10 @@ function allcp(thid) {
     })
     
     $("#Products").val(pd);
+    
 
 
-    mone(thid, che, totalMoney)
+
+    //mone(thid, che, totalMoney)
 
 }
