@@ -1,5 +1,34 @@
 @CHARSET "UTF-8";
 
+.submit {
+	width: 100%;
+	float: left;
+	text-align: center;
+	padding-bottom: 10px;
+	vertical-align: middle;
+}
+
+.submit input {
+	background-color: #ff5600;
+	display: inline;
+	line-height: 100%;
+	text-align: center;
+	color: #fff;
+	text-shadow: 1px 1px 1px #333;
+	border-radius: 6px;
+	width: 200px;
+	height: 36px;
+	line-height: 36px;
+	color: #FFF;
+	font-size: 18px;
+	vertical-align: middle;
+	cursor: pointer;
+	border: 0; /*  margin: 5px auto;
+    margin-bottom: 20px;
+    padding: 10px 0;
+    */
+}
+
 em {
 	font-style: normal;
 	color: #F00;
@@ -12,26 +41,29 @@ img {
 }
 
 .productlist {
-	padding-left:0px;
+	padding-left: 0px;
 	width: 100%;
 	display: block;
 }
 
 .productlist li {
-	float:left;
-	list-style: none;
+	margin: 0 6px 6px 0px;
 	float: left;
+	list-style: none;
 	background: #EEE;
 	color: #a90201;
 	vertical-align: top;
-	margin: 0em 0.2em 0.6em 0em;
+
 	/*
-		
+		margin: 0em 0.2em 0.4em 0em;
 		font-size: 1em;
 	*/
 }
 
 .productlist li label {
+	padding: 4px;
+	margin-left: 0px;
+	margin-right: 0px;
 	display: block;
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 	/* 
@@ -44,8 +76,7 @@ img {
 
 .productlist li label input {
 	float: left;
-	display: none;
-	/* margin-top: 0.8em; */
+	margin-top: 1em;
 }
 
 .productlist li img {
@@ -61,29 +92,20 @@ img {
 	width: auto;
 }
 
-.redboder {
-	padding: 0.1em !important;
-	border: 0.1em solid #f00;
+.redborder {
+	padding: 2px !important;
+	border: 2px solid #f00;
 }
 
-
-
-
-
-
-
-
-
-
 .bootstrap-frm div {
-	width:100%;
-	float:left;
+	width: 100%;
+	float: left;
 	margin-top: 1em;
 	display: block;
 }
 
 .bootstrap-frm div>span {
-	padding-right:14px;
+	padding-right: 14px;
 	float: left;
 	width: 20%;
 	text-align: right;
@@ -97,11 +119,11 @@ img {
 	 */
 }
 
-.bootstrap-frm div p, .bootstrap-frm div ul {
-	vertical-align:top;
-	margin-top:0px;
+.bootstrap-frm div p, .bootstrap-frm div ul, .bootstrap-frm div div {
+	vertical-align: top;
+	margin-top: 0px;
 	float: left;
-	width: 70%;
+	width: 60%;
 	display: block;
 	/* line-height:15em; */
 }
@@ -126,11 +148,11 @@ border-radius: 5em;
 
 .bootstrap-frm h1 {
 	font: 25em "Helvetica Neue", Helvetica, Arial, sans-serif;
+	color: #888;
 	/* padding: 0em 0em 1em 4em;
 display: block;
 border-bottom: 1em solid #DADADA;
 margin: -1em -3em 3em -3em; */
-	color: #888;
 }
 
 .bootstrap-frm h1>span {
@@ -153,6 +175,9 @@ font-weight: bold;
 } */
 .bootstrap-frm input[type="text"], .bootstrap-frm input[type="email"],
 	.bootstrap-frm textarea, .bootstrap-frm select {
+	margin-top: 0.2em;
+	width: 60%;
+	height: 1.2em;
 	/* border: 0.1em solid #CCC;
 height: 0.1em;
 outline: 0 none;
@@ -160,21 +185,13 @@ padding: 1em 0em 1em 1em;
 color: #888; 
 height: 2em;
 
-*/
-	/* 
+ 
 line-height:1em;
 margin-bottom: 1em;
 margin-right: 1em;
 margin-top: 1em;
 line-height:1em;
  */
-	margin-top: 0.2em;
-	width: 70%;
-	
-	
-	
-	
-
 	/* 
 	-webkit-border-radius: 0.2em;
 	-moz-border-radius: 0.2em;
@@ -188,8 +205,8 @@ line-height:1em;
 .bootstrap-frm select {
 	background: #FFF url('down-arrow.png') no-repeat right;
 	background: #FFF url('down-arrow.png') no-repeat right;
-	width: 70.4%;
-
+	width: 60.6%;
+	height: 1.6em;
 	/* appearance:none;
 -webkit-appearance:none;
 -moz-appearance: none;
@@ -200,17 +217,17 @@ line-height:15em; */
 }
 
 .bootstrap-frm textarea {
+	width: 60%;
 	/* height:100em;
 padding: 5em 0em 0em 5em; */
-	width: 70%;
 }
 
 .bootstrap-frm .button {
 	background: #FFF;
-	/* border: 1em solid #CCC;
-padding: 10em 25em 10em 25em; */
 	color: #333;
 	border-radius: 4em;
+	/* border: 1em solid #CCC;
+padding: 10em 25em 10em 25em; */
 }
 
 .bootstrap-frm .button:hover {
