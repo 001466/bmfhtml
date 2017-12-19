@@ -40,6 +40,9 @@ img {
 	vertical-align: top;
 }
 
+
+
+
 .productlist {
 	padding-left: 0px;
 	width: 100%;
@@ -53,7 +56,6 @@ img {
 	background: #EEE;
 	color: #a90201;
 	vertical-align: top;
-
 	/*
 		margin: 0em 0.2em 0.4em 0em;
 		font-size: 1em;
@@ -61,11 +63,13 @@ img {
 }
 
 .productlist li label {
+	line-height:2em;
 	padding: 4px;
 	margin-left: 0px;
 	margin-right: 0px;
 	display: block;
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 0.6em;
 	/* 
 	padding: 0.1em;
 	font-size: 0.8em;
@@ -79,15 +83,15 @@ img {
 	margin-top: 1em;
 }
 
-.productlist li img {
-	width: 2.8em;
-	height: 2.6em;
+.productlist li label img {
+	width:4em;
+	height:4em;
 	float: left;
 	margin: 0 0.1em;
 }
 
-.productlist li span {
-	font-size: 0.2em;
+.productlist li label span {
+	font-size: 1em;
 	font-weight: bold;
 	width: auto;
 }
