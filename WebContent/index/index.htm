@@ -9,9 +9,10 @@
 <meta content="telephone=no" name="format-detection"/>
 <title>㊙别去算命了，你的生肖决定了你这辈子是穷苦命，还是富贵命！</title>
 <link href="images/style.css" tppabs="images/style.css" rel="stylesheet" type="text/css"/>
+
 <link href="css/nav.css" tppabs="css/nav.css" rel="stylesheet" type="text/css"/>
-<link rel="stylesheet" href="css/latestorder.css"  />
 <link rel="stylesheet" href="css/comment.css"  />
+<link rel="stylesheet" href="css/wechat.css"  />
 
 
 <script type="text/javascript" src="js/jquery.js"></script>
@@ -356,7 +357,7 @@ var scrollComment = function(){
 	
 	
 	<a name="order"></a>
-	<script  type="text/javascript" >document.write("<iframe src='http://order?createby=" + window.top.document.location + " ' height='1800px' width='100%' frameborder='0' scrolling='No'></iframe>")</script>
+	<script  type="text/javascript" >document.write("<iframe src='http://bmforder.easyad888.com?createby=" + window.top.document.location + " ' height='1000px' width='100%' frameborder='0' scrolling='No'></iframe>")</script>
 	
 	
 	
@@ -379,9 +380,9 @@ var scrollComment = function(){
 		<ul>	
 		<li>
 			
-				<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=2832320830&site=qq&menu=yes">
+				<a target="_blank" href="javascript:popup();">
 				<label style="background-color:#ccb966;">
-				<img border="0"   src="images/qq.png" alt="奉请咨询" title="奉请咨询"/>
+				<img border="0"   src="images/wechat.png" alt="奉请咨询" title="奉请咨询"/>
 				奉请咨询
 				</label>
 				</a>
@@ -420,11 +421,35 @@ var scrollComment = function(){
                 gotop.style.display = "none";
             }
         }
+        
     </script>
 
-    <div style="display:none;">
-	
-	</div>
+    	<div align="center">
+		<div class="" style="max-width:640px; min-width:320px; margin:auto;  z-index:99999999999999999999999999999">
+			<div class="wechatBox" id="wechatBox" onClick="closeP()"></div>
+			<div class="wechat" id="wechat">
+				<p class="p1"><strong>先</strong>长按<strong>微信号复制</strong><br><strong>再</strong>点击<strong>“打开微信”</strong></p>
+				<p class="wxid"><span style="line-height: 30px; white-space: pre-wrap;">xy1281014</span> <span style="line-height: 25.6px; white-space: pre-wrap;"></span></p>
+				<p id="yft" class="p2"><a href="weixin://" onClick="PIWI_SUBMIT.Weixin_Open()" style="color: #000;text-decoration: none;display: inline-block;border: 1px solid #c6c6c6;border-radius: 10em;padding: 0 .7em;font-size: 1.25em;background: linear-gradient(180deg,#f5f5f5,#d7d7d7,#d2d2d2);margin-left: .2em;"><font color="#000">打开微信</font></a></p>
+			</div>
+			<script type="text/javascript">
+                function closeP(){
+                    var wx=document.getElementById("wechat");
+                    var wxb=document.getElementById("wechatBox");
+                    wx.style.display="none";
+                    wxb.style.display="none";
+                }
+                function popup(){
+                    var wx=document.getElementById("wechat");
+                    var wxb=document.getElementById("wechatBox");
+                    wx.style.display="block";
+                    wxb.style.display="block";
+                }
+			</script>
+
+
+		</div>
+		</div>
 
 
 

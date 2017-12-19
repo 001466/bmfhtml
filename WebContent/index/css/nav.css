@@ -2,6 +2,7 @@
 
 .nav {
 	height:40px;
+	max-width:640px; 
 	position: fixed;
 	z-index: 999;
 	left: 0;
@@ -37,7 +38,7 @@
 }
 
 .nav li img {
-	margin-left:6em;
+	margin-left:2em;
 	width: 1.8em;
 	height:1.8em ;
 	float: left;
@@ -46,7 +47,7 @@
 .nav li span {
 	width:50%;
 	text-align:left;
-	margin-right:0;
+	margin-right:4em;
 	width:auto;
 	float: left;
 	font-size: 1em;
