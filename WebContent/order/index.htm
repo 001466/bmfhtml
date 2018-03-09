@@ -149,7 +149,11 @@ var scrollComment = function(){
                 	if(parmsArr.length>0){
                 		var customVisitUrl=parmsArr[0].split("=")[1];
                 		var i=customVisitUrl.indexOf("#");
-                		$("#customVisitUrl").val(customVisitUrl.substring(0,i));
+                		if(i>-1){
+                			$("#customVisitUrl").val(customVisitUrl.substring(0,i));
+                		}else{
+                			$("#customVisitUrl").val(customVisitUrl);
+                		}
                 	}
                 	
                 })
