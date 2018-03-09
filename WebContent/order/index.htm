@@ -120,25 +120,38 @@ var scrollComment = function(){
 		<!--<form method="post"	action="http://ordersvr.easyad888.com/add"-->
 		<!--<form method="post"	action="http://localhost:8888/add"  -->
 		
-		<form method="post"	action="http://ordersvr.easyad888.com/add"
-		class="bootstrap-frm"
-			
-			
-		id="ordeForm">
+		<form method="post"	action="http://ordersvr.easyad888.com/order/add"
+
+		class="bootstrap-frm"		id="ordeForm">
 		
 		
-			<input type="hidden" name="type" id="type" value="sogou-bmf"/>
+			<input type="hidden" name="type" id="type" value="bmf"/>
 		
+			<input type="hidden" name="productType" id="productType" value="bmf" /> 
 			<input type="hidden" name="productId" id="productId" /> 
 			<input type="hidden" name="productPrices" id="productPrices" />
 			
-			
+			<input type="hidden" name="customType" id="customType" value="0"	/>
 			<input type="hidden" name="customFrom" id="customFrom" value="sogou"	/>
+			<input type="hidden" name="customVisitUrl" id="customVisitUrl" 	/>
+			
+			
 			
 			
 			<script type="text/javascript">
                 $(function () {
-                    $("#customFrom").val(window.location.href);
+                	
+
+                	var url=window.location.href;
+                	var i=url.indexOf("?");
+                	var paramsStr=url.substring(i+1,url.length);
+                	var parmsArr=paramsStr.split("&");
+                	if(parmsArr.length>0){
+                		var customVisitUrl=parmsArr[0].split("=")[1];
+                		var i=customVisitUrl.indexOf("#");
+                		$("#customVisitUrl").val(customVisitUrl.substring(0,i));
+                	}
+                	
                 })
             </script>
             
