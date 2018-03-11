@@ -461,7 +461,37 @@ if(iframeUrl.lastIndexOf("/")>-1){
 }
 
 
-document.write("<iframe id='orderframe' src='"+iframeUrl+"/?customVisitUrl=" + window.document.location.href + "&type=pay&productType=bmf&customType=0&customFrom=sogou' height='1000px' width='100%' frameborder='0' scrolling='No'></iframe>");
+var customFrom=document.referrer;
+
+customFrom = customFrom.toLowerCase();
+
+if(customFrom.indexOf("sogou.")>-1){
+	customFrom="sogou";
+}
+else if(customFrom.indexOf("baidu.")>-1){
+	customFrom="baidu";
+}
+else if(customFrom.indexOf("google.")>-1){
+	customFrom="google";
+}
+else if(customFrom.indexOf("soso.")>-1){
+	customFrom="soso";
+}
+else if(customFrom.indexOf("youdao.")>-1){
+	customFrom="youdao";
+}
+else if(customFrom.indexOf("yahoo.")>-1){
+	customFrom="yahoo";
+}
+else if(customFrom.indexOf("360.")>-1){
+	customFrom="360";
+}
+else if(customFrom.indexOf("bing.")>-1){
+	customFrom="bing";
+}
+
+document.write("<iframe id='orderframe' src='"+iframeUrl+"/?customVisitUrl=" + window.document.location.href + "&type=pay&productType=bmf&customType=0&customFrom="+customFrom+"' height='1000px' width='100%' frameborder='0' scrolling='No'></iframe>");
+
 </script>
 	
 	
