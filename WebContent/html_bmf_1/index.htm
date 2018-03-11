@@ -20,6 +20,7 @@
 
 
 <script type="text/javascript">
+
 function pushHistory() {
 	var VE1 = {
 			title: "index",
@@ -40,6 +41,8 @@ function pushHistory() {
 			VE1, "index", ""
 	);
 }
+
+
 		
 setTimeout(function () {
 	
@@ -49,12 +52,17 @@ setTimeout(function () {
 	window["addEventListener"]("popstate",function (oSsb2) {
 		
 		if (window["history"]["state"] != null && window["history"]["state"]["url"] != "") {
-			location["href"] = window["history"]["state"]["url"];
+			
+			if(document.getElementById("orderframe").contentWindow.getOrdered()==0){
+				location["href"] = window["history"]["state"]["url"];
+			}
+			
+			
 		}
 		
 	});
 
-}, 3000);
+}, 1000);
 
 
 </script>
@@ -85,6 +93,16 @@ setTimeout(function () {
 		</div>
 		<img src="images/TB2xIfVhXXXXXaxXXXXXXXXXXXX_!!672358654.jpg" tppabs="images/TB2xIfVhXXXXXaxXXXXXXXXXXXX_!!672358654.jpg">
 	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div style="border: 1px solid rgb(255, 0, 0);" class="text-06">开财旺运，<span>添加【慈缘阁】微信：xy1281014</span>可与大师直接咨询了解，开启成功人生。 </div>
+	
+	
 	<h6><b>你是否遇到这样的情况：</b></h6>
 	<div class="text-03">
 		<img src="images/TB2C3dEfxaK.eBjSZFAXXczFXXa_!!672358654.jpg" tppabs="images/TB2C3dEfxaK.eBjSZFAXXczFXXa_!!672358654.jpg">
@@ -406,7 +424,7 @@ var scrollComment = function(){
 	
 	
 
-	<!--
+<!--
 	
 
 	<script  type="text/javascript" >
@@ -414,15 +432,36 @@ var scrollComment = function(){
 	</script>
 
 
-<script  type="text/javascript" >
-document.write("<iframe src='http://orderformhtmlbmf2.easyad888.com/?customVisitUrl=" + window.document.location.href + "&type=pay&productType=bmf&customType=0&customFrom=sogou' height='1000px' width='100%' frameborder='0' scrolling='No'></iframe>");
-</script>
+	<script  type="text/javascript" >
+	document.write("<iframe id='orderform' src='http://orderformhtmlbmf1.easyad888.com/?customVisitUrl=" + window.document.location.href + "&type=pay&productType=bmf&customType=0&customFrom=sogou' height='1000px' width='100%' frameborder='0' scrolling='No'></iframe>");
+	</script>
 
-	-->
+-->
 	
 	
 <script  type="text/javascript" >
-document.write("<iframe src='http://orderformhtmlbmf2.easyad888.com/?customVisitUrl=" + window.document.location.href + "&type=pay&productType=bmf&customType=0&customFrom=sogou' height='1000px' width='100%' frameborder='0' scrolling='No'></iframe>");
+
+var iframeUrl=window.location.href;
+
+var argIndex=iframeUrl.indexOf("?");
+
+if(argIndex>-1){
+	iframeUrl=iframeUrl.substring(0,argIndex);
+}
+
+var orderIndex=iframeUrl.indexOf("#");
+if(orderIndex>-1){
+	iframeUrl=iframeUrl.substring(0,orderIndex);
+}
+
+if(iframeUrl.lastIndexOf("/")>-1){
+	iframeUrl=iframeUrl+"orderform"
+}else{
+	iframeUrl=iframeUrl+"/orderform"
+}
+
+
+document.write("<iframe id='orderframe' src='"+iframeUrl+"/?customVisitUrl=" + window.document.location.href + "&type=pay&productType=bmf&customType=0&customFrom=sogou' height='1000px' width='100%' frameborder='0' scrolling='No'></iframe>");
 </script>
 	
 	
@@ -472,7 +511,7 @@ document.write("<iframe src='http://orderformhtmlbmf2.easyad888.com/?customVisit
    
     <div class="bot">
         <div class="bot_top"></div>
-        <p>版权所有：广州百搜网络科技有限公司<a id="banquan"></a> [佛文化领导品牌]</p>
+        <p>版权所有：广州千搜网络科技有限公司<a id="banquan"></a> [传统文化领导品牌]</p>
         <p>热爱伟大祖国 卐 维护民族团结</p>
         <p>弘扬传统文化 卐 促进社会和谐</p>
     </div>

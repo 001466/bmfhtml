@@ -22,8 +22,8 @@
 <link rel="stylesheet" href="css/latestorder.css"  />
 <!-- 
 <link rel="stylesheet" href="css/comment.css"  />
- -->
 
+ -->
 <script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript" src="js/jquery.validate.js"></script>
 
@@ -102,6 +102,10 @@ var scrollComment = function(){
 	
 	
 <script type="text/javascript">
+var ordered=0;
+function getOrdered(){
+	return ordered;
+}
 
         jQuery.validator.addMethod("mobile", function(value, element) {
           var length = value.length;
@@ -417,6 +421,9 @@ var scrollComment = function(){
 							    data: $(form).serialize(),
 						        crossDomain: true,
 						        success  : function(data) {  
+						        	
+						        	ordered=1;
+
 						        	HideProgressBar();
 						        	
 						        	var jsondata=null;
@@ -430,7 +437,7 @@ var scrollComment = function(){
 						        	if(jsondata.errorCode==0){
 						        		win.alert('恭喜','奉成功',true);
 						        	}else if(jsondata.errorCode==101){
-						        		win.alert('抱谦','今天已超过献上限，明天再试！',true);
+						        		win.alert('抱谦','今天已超过奉请上限，请联系管理人员下单！',true);
 						        	}else
 						        		win.alert('抱谦',jsondata.message,true);
 						        } 
