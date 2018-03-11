@@ -125,21 +125,20 @@ var scrollComment = function(){
 
 		-->
 		
-		<form method="post"	action="http://localhost:8888/order/add"  
+		<form method="post"	action="http://ordersvr.easyad888.com/order/add"
 
 		class="bootstrap-frm"		id="ordeForm">
 		
 		
-			<input type="hidden" name="type" id="type" value="bmf"/>
+			<input type="hidden" name="type" id="type"/>
 		
 			<input type="hidden" name="productType" id="productType" value="bmf" /> 
 			<input type="hidden" name="productId" id="productId" /> 
 			<input type="hidden" name="productPrices" id="productPrices" />
 			
 			<input type="hidden" name="customType" id="customType" value="0"	/>
-			<input type="hidden" name="customFrom" id="customFrom" value="sogou"	/>
+			<input type="hidden" name="customFrom" id="customFrom" />
 			<input type="hidden" name="customVisitUrl" id="customVisitUrl" 	/>
-			
 			
 			
 			
@@ -148,19 +147,71 @@ var scrollComment = function(){
                 	
 
                 	var url=window.location.href;
-                	var i=url.indexOf("?");
-                	var paramsStr=url.substring(i+1,url.length);
+                	
+                	var argIndex=url.indexOf("?");
+                	
+                	var paramsStr=url.substring(argIndex+1,url.length);
+                	
                 	var parmsArr=paramsStr.split("&");
+                	
                 	if(parmsArr.length>0){
-                		var customVisitUrl=parmsArr[0].split("=")[1];
-                		var i=customVisitUrl.indexOf("#");
-                		if(i>-1){
-                			$("#customVisitUrl").val(customVisitUrl.substring(0,i));
-                		}else{
-                			$("#customVisitUrl").val(customVisitUrl);
+
+                		for(var i=0;i<parmsArr.length;i++){
+                			
+                			var pstr=parmsArr[i];
+                			
+                			if(pstr.indexOf('customVisitUrl')>-1){
+                				var customVisitUrl=pstr.split("=")[1];
+                        		var lastCut=customVisitUrl.indexOf("#");
+                        		if(lastCut>-1){
+                        			$("#customVisitUrl").val(customVisitUrl.substring(0,lastCut));
+                        		}else{
+                        			$("#customVisitUrl").val(customVisitUrl);
+                        		}
+                			}
+                			
+                			
+                			
+                			if(pstr.indexOf('type')>-1){
+                				$("#type").val(pstr.split("=")[1]);
+                			}
+                			if(pstr.indexOf('productType')>-1){
+                				$("#productType").val(pstr.split("=")[1]);
+                			}
+                			if(pstr.indexOf('customType')>-1){
+                				$("#customType").val(pstr.split("=")[1]);
+                			}
+                			if(pstr.indexOf('customFrom')>-1){
+                				$("#customFrom").val(pstr.split("=")[1]);
+                			}
+                			
+                			
                 		}
                 		
+                		  		
+                		
                 	}
+                	
+                	$.ajax({
+                	    type: 'POST',
+                	    method: "POST",
+                	    url:'http://ordersvr.easyad888.com/visitor/add',
+                	    //url: 'http://localhost:8888/visitor/add',
+                	    data: {
+                	    	"customType":$("#customType").val(),
+                	    	"customFrom":$("#customFrom").val(),
+                	    	"customVisitUrl": $("#customVisitUrl").val(),
+                	    	"productType":$("#productType").val()
+                	    },
+                        crossDomain: true,
+                        success  : function(data) {  
+                        	console.log('wellcome!');
+                        } 
+                	}); 
+                	
+                	
+                	 
+                	
                 	
                 })
             </script>

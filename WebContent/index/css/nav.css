@@ -1,8 +1,9 @@
 @CHARSET "UTF-8";
 
 .nav {
+	 
 	height:40px;
-	max-width:640px; 
+	 
 	position: fixed;
 	z-index: 999;
 	left: 0;
