@@ -32,7 +32,7 @@
 em {
 	font-style: normal;
 	color: #F00;
-	margin-right: 0.2em;
+	margin-right: 1em;
 }
 
 img {
@@ -110,9 +110,9 @@ img {
 }
 
 .bootstrap-frm div>span {
-	padding-right: 8px;
+	padding-right: 14px;
 	float: left;
-	width: 16%;
+	width: 20%;
 	text-align: right;
 	color: #333;
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -208,8 +208,9 @@ margin: -1em -3em 3em -3em; */
 }
 
 .zodiaclist li {
-	width: 40%;
-	margin-left: 1.22em;
+	width: 42%;
+	margin: 0em 1em 0em 0em;
+	
 	float: left;
 	display: block;
 	list-style: none;
@@ -223,12 +224,10 @@ margin: -1em -3em 3em -3em; */
 }
 
 .zodiaclist li label {
-	
-	width:24em;
+	width:20em;
 	line-height:2em;
 	margin-left: 0px;
 	margin-right: 0px;
-	
 	display: block;
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-size: 0.8em;

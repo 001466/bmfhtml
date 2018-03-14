@@ -274,27 +274,24 @@ function getOrdered(){
 					
 						<ul  id="productlist" class="productlist">
 
-						<li style="width: 100%;margin-top: -8px;">
-							<label> 
-							<span style="color: #851FD1">如奉请多尊请在留言处说明！</span>
-							</label>
-						</li>
+						 
 
 						<li>
 						<label> 
-							<input type="checkbox" name="productMaterial" class="ck"  value="198|黑曜石"	onclick="allcp(this);" data-rule-required="true" data-msg-required="选择圣品"/> 
+							<input type="checkbox" name="productMaterial" class="ck"  value="0|黑曜石"	onclick="allcp(this);" data-rule-required="true" data-msg-required="选择圣品"/> 
 							<img src="images/TB2mkZWc4mJ.eBjy0FhXXbBdFXa_!!1699978161.jpg"/>	
 							黑曜石吊坠<span style="font-size: 10px;">(送貔貅手链)</span>
-							<br/> 结缘价:<span>198</span>元 <span style="color: green; font-size: 10px;">(已奉<b class="rdnum">335</b>尊)</span>
+							<br/> 结缘价:<span>0</span>元 <span style="color: green; font-size: 10px;">(已奉<b class="rdnum">335</b>尊)</span>
 						</label>
 						</li>
 						
+						<!-- 
 						<li>
 						<label> 
 							<input type="checkbox" name="productMaterial" class="ck"   value="298|冰种黑曜石" onclick="allcp(this);" /> 
 							<img src="images/TB2H2MpdF5N.eBjSZFvXXbvMFXa_!!1699978161.jpg"/>	
 							冰种黑曜石<span style="font-size: 10px;">(送貔貅手链)</span>
-							<br/> 结缘价:<span>298</span>元 <span style="color: green; font-size: 10px;">(已奉<b class="rdnum">335</b>尊)	</span>
+							<br/> 结缘价:<span>298</span> <span style="color: green; font-size: 10px;">(已奉<b class="rdnum">335</b>尊)	</span>
 						</label>
 						</li>
 						
@@ -303,7 +300,7 @@ function getOrdered(){
 							<input type="checkbox" name="productMaterial" class="ck"   value="398|白玛瑙" onclick="allcp(this);"/> 
 							<img src="images/TB23bkvlhXlpuFjSsphXXbJOXXa_!!105963984.jpg"/>
 							白玛瑙吊坠<span style="font-size: 10px;">(送貔貅手链)</span>
-							<br/> 结缘价:<span>398</span>元 <span style="color: green; font-size: 10px;">(已奉<b class="rdnum">398</b>尊)
+							<br/> 结缘价:<span>398</span> <span style="color: green; font-size: 10px;">(已奉<b class="rdnum">398</b>尊)
 							</span>
 						</label>
 						</li>
@@ -313,7 +310,7 @@ function getOrdered(){
 							<input type="checkbox" name="productMaterial" class="ck"   value="398|红玛瑙" onclick="allcp(this);" /> 
 							<img src="images/TB2A2QMc31J.eBjy0FaXXaXeVXa_!!1699978161.jpg"/>	
 							红玛瑙吊坠<span style="font-size: 10px;">(送貔貅手链)</span>
-							<br/> 结缘价:<span>398</span>元 <span style="color: green; font-size: 10px;">(已奉<b class="rdnum">335</b>尊)
+							<br/> 结缘价:<span>398</span> <span style="color: green; font-size: 10px;">(已奉<b class="rdnum">335</b>尊)
 							</span>
 						</label>
 						</li>
@@ -323,7 +320,7 @@ function getOrdered(){
 							<input type="checkbox" name="productMaterial" class="ck"   value="398|和田玉" onclick="allcp(this);"/> 
 							<img src="images/TB2Y2MpdF5N.eBjSZFvXXbvMFXa_!!1699978161.jpg"/>
 							和田玉吊坠<span style="font-size: 10px;">(送貔貅手链)</span>
-							<br/> 结缘价:<span>398</span>元 <span style="color: green; font-size: 10px;">(已奉<b class="rdnum">398</b>尊)
+							<br/> 结缘价:<span>398</span> <span style="color: green; font-size: 10px;">(已奉<b class="rdnum">398</b>尊)
 							</span>
 						</label>
 						</li>
@@ -333,11 +330,11 @@ function getOrdered(){
 							<input type="checkbox" name="productMaterial" class="ck"   value="198|貔貅手链" onclick="allcp(this);"/> 
 							<img src="images/TB2uxYBnt0opuFjSZFxXXaDNVXa_!!105963984.jpg"/>
 							貔貅手链
-							<br/> 结缘价:<span>198</span>元 <span style="color: green; font-size: 10px;">(已奉<b class="rdnum">198</b>尊)
+							<br/> 结缘价:<span>198</span> <span style="color: green; font-size: 10px;">(已奉<b class="rdnum">198</b>尊)
 							</span>
 						</label>
 						</li>
-
+ 						-->
 
 
 						
@@ -353,8 +350,10 @@ function getOrdered(){
 		                    var c = m - n + 1;
 		                    return Math.floor(Math.random() * c + n);
 		                }
+						
 		                $(function () {
-		                    $("#productlist").find("input:checkbox").eq(1).click();
+		                	
+		                    $("#productlist").find("input:checkbox").eq(0).click();
 		                    
 		                    for (var i = 0; i < $(".rdnum").length; i++) {
 		                    	$($(".rdnum")[i]).html(rd(168,999));
@@ -365,12 +364,12 @@ function getOrdered(){
 
 
 					 
-					<div>
+					<div style="display: none;">
 					<span><em>*</em>金额 :</span>
 					<div><em id="productPricesLabel" class="red">0</em>元</div>
 					</div>
 					
-					<div>
+					<div style="display: none;">
 						<span> <em>&nbsp;</em>已选 : 	</span>
 						<ul id="productSelected" class="productlist">
 						</ul>	
