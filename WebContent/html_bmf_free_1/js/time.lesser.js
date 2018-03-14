@@ -1,4 +1,4 @@
-// JavaScript Document
+ï»¿// JavaScript Document
 /**
  * @copyright (C)2011 Cenwor Inc.
  * @author Moyo <dev@uuland.org>
@@ -50,14 +50,14 @@ function showtime(id, time, msid)
 	$__ms_Count[id] = 9;
 	if (time <= 0)
 	{
-		$('#' + id).html('<span>»î¶¯ÒÑ¾­½áÊø</span>');
+		$('#' + id).html('<span>æ´»åŠ¨å·²ç»ç»“æŸ</span>');
 		return;
 	}
 	var timeUnits = {
-		'day': { 'name': 'Ìì', 'count': 86400 },
-		'hour': { 'name': 'Ğ¡Ê±', 'count': 3600 },
-		'minute': { 'name': '·Ö', 'count': 60 },
-		'second': { 'name': 'Ãë', 'count': 1 }
+		'day': { 'name': 'å¤©', 'count': 86400 },
+		'hour': { 'name': 'å°æ—¶', 'count': 3600 },
+		'minute': { 'name': 'åˆ†', 'count': 60 },
+		'second': { 'name': 'ç§’', 'count': 1 }
 	};
 	var string = '';
 	var iLess = time;
@@ -79,7 +79,10 @@ function showtime(id, time, msid)
 		var msid = 'msid_'+__rand_key();
 		string += '<font id="'+msid+'">.0</font>';
 	}
-*/	$('#' + id).html(string);
+*/	
+
+
+	$('#' + id).html(string);
 	setTimeout(function(){showtime(id, time - 1, msid)}, $__ms_use ? 100 : 1000);
 }
 

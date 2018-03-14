@@ -14,12 +14,12 @@ function allcp(thid) {
     vals = thid.value.split("|");
 
 
-    var totalMoney = 0;
-    for (var i = 0; i < $(".ck").length; i++) {
+    var totalMoney = 1;
+    /*for (var i = 0; i < $(".ck").length; i++) {
         if ($(".ck")[i].checked == true) {
             totalMoney = Number(totalMoney) + Number($(".ck")[i].value.split("|")[0]);
         }
-    }
+    }*/
     $("#productPrices").val(totalMoney);
     document.getElementById("productPricesLabel").innerHTML=totalMoney;
 
@@ -51,4 +51,28 @@ function allcp(thid) {
     $("#productId").val(pds.substring(0,pds.length-1));
     
 
+}
+
+
+
+
+
+function brhclick(thid) {
+     
+    val = thid.value;
+
+    var selectedUl = document.getElementById("zodiacSelected");
+    var li = document.createElement("li");
+    if (thid.checked == true) {
+        li.innerHTML = val;
+        selectedUl.appendChild(li);
+    }else {
+        var ls = selectedUl.getElementsByTagName("li");
+        for (var i = 0; i < ls.length; i++) {
+            var txt = ls[i].innerText || ls[i].textContent;
+            if (txt === val) {
+                selectedUl.removeChild(ls[i])
+            }
+        }
+    }
 }

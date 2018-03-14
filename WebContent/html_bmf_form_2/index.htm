@@ -237,23 +237,23 @@ function getOrdered(){
 			<div>
             	<span><em>*</em>生肖 :</span>
             	<ul  id="zodiaclist" class="zodiaclist">
-            		<li style="margin-right: 1em;"><label>鼠(千手观音)<input type="radio" name="productBranch"   value="鼠(千手观音)" data-rule-required="true" data-msg-required="选择生肖"/></label></li>	
-					<li style="margin-left: 1em;"><label>牛(虚空藏菩萨)<input type="radio" name="productBranch"   value="牛(虚空藏菩萨)"/></label></li>
+            		<li style="margin-right: 1em;"><label>鼠(千手观音)<input type="checkbox" name="productBranch" onclick="brhclick(this);"  value="鼠(千手观音)" data-rule-required="true" data-msg-required="选择生肖"/></label></li>	
+					<li style="margin-left: 1em;"><label>牛(虚空藏菩萨)<input type="checkbox" name="productBranch" onclick="brhclick(this);"  value="牛(虚空藏菩萨)"/></label></li>
 
-					<li style="margin-right: 1em;"><label>虎(虚空藏菩萨)<input type="radio" name="productBranch"   value="虎(虚空藏菩萨)"/></label></li>
-					<li style="margin-left: 1em;"><label>兔(文殊菩萨)<input type="radio" name="productBranch"   value="兔(文殊菩萨)"/></label></li>
+					<li style="margin-right: 1em;"><label>虎(虚空藏菩萨)<input type="checkbox" name="productBranch"  onclick="brhclick(this);"  value="虎(虚空藏菩萨)"/></label></li>
+					<li style="margin-left: 1em;"><label>兔(文殊菩萨)<input type="checkbox" name="productBranch" onclick="brhclick(this);"   value="兔(文殊菩萨)"/></label></li>
 
-					<li style="margin-right: 1em;"><label>龙(普贤菩萨)<input type="radio" name="productBranch"   value="龙(普贤菩萨)"/></label></li>
-					<li style="margin-left: 1em;"><label>蛇(普贤菩萨)<input type="radio" name="productBranch"   value="蛇(普贤菩萨)"/></label></li>
+					<li style="margin-right: 1em;"><label>龙(普贤菩萨)<input type="checkbox" name="productBranch" onclick="brhclick(this);"   value="龙(普贤菩萨)"/></label></li>
+					<li style="margin-left: 1em;"><label>蛇(普贤菩萨)<input type="checkbox" name="productBranch" onclick="brhclick(this);"   value="蛇(普贤菩萨)"/></label></li>
 
-					<li style="margin-right: 1em;"><label>马(大势至菩萨)<input type="radio" name="productBranch"   value="马(大势至菩萨)"/></label></li>
-					<li style="margin-left: 1em;"><label>羊(大日如来)<input type="radio" name="productBranch"   value="羊(大日如来)"/></label></li>
+					<li style="margin-right: 1em;"><label>马(大势至菩萨)<input type="checkbox" name="productBranch" onclick="brhclick(this);"   value="马(大势至菩萨)"/></label></li>
+					<li style="margin-left: 1em;"><label>羊(大日如来)<input type="checkbox" name="productBranch" onclick="brhclick(this);"   value="羊(大日如来)"/></label></li>
 
-					<li style="margin-right: 1em;"><label>猴(大日如来)<input type="radio" name="productBranch"   value="猴(大日如来)"/></label></li>
-					<li style="margin-left: 1em;"><label>鸡(不动尊菩萨)<input type="radio" name="productBranch"   value="鸡(不动尊菩萨)"/></label></li>
+					<li style="margin-right: 1em;"><label>猴(大日如来)<input type="checkbox" name="productBranch" onclick="brhclick(this);"   value="猴(大日如来)"/></label></li>
+					<li style="margin-left: 1em;"><label>鸡(不动尊菩萨)<input type="checkbox" name="productBranch" onclick="brhclick(this);"   value="鸡(不动尊菩萨)"/></label></li>
 
-					<li style="margin-right: 1em;"><label>狗(阿弥陀佛)<input type="radio" name="productBranch"   value="狗(阿弥陀佛)"/></label></li>
-					<li style="margin-left: 1em;"><label>猪(阿弥陀佛)<input type="radio" name="productBranch"   value="猪(阿弥陀佛)"/></label></li>
+					<li style="margin-right: 1em;"><label>狗(阿弥陀佛)<input type="checkbox" name="productBranch" onclick="brhclick(this);"   value="狗(阿弥陀佛)"/></label></li>
+					<li style="margin-left: 1em;"><label>猪(阿弥陀佛)<input type="checkbox" name="productBranch"  onclick="brhclick(this);"  value="猪(阿弥陀佛)"/></label></li>
             	</ul>
             </div>
             
@@ -261,7 +261,7 @@ function getOrdered(){
             <script type="text/javascript">
 						 
                 $(function () {
-                    $("#zodiaclist").find("input:radio").eq(2).click();
+                    $("#zodiaclist").find("input:checkbox").eq(2).click();
                 })
                 
             </script>
@@ -298,6 +298,17 @@ function getOrdered(){
 						</label>
 						</li>
 						
+
+						<li>
+						<label> 
+							<input type="checkbox" name="productMaterial" class="ck"   value="398|黄金黑曜石" onclick="allcp(this);" /> 
+							<img src="images/TB2OcsGll0kpuFjy1zdXXXuUVXa_!!105963984.jpg"/>	
+							黄金黑曜石<span style="font-size: 10px;">(送貔貅手链)</span>
+							<br/> 结缘价:<span>398</span>元 <span style="color: green; font-size: 10px;">(已奉<b class="rdnum">335</b>尊)	</span>
+						</label>
+						</li>
+						
+
 						<li>
 						<label> 
 							<input type="checkbox" name="productMaterial" class="ck"   value="398|白玛瑙" onclick="allcp(this);"/> 
@@ -307,6 +318,7 @@ function getOrdered(){
 							</span>
 						</label>
 						</li>
+
 						
 						<li>
 						<label> 
@@ -354,7 +366,7 @@ function getOrdered(){
 		                    return Math.floor(Math.random() * c + n);
 		                }
 		                $(function () {
-		                    $("#productlist").find("input:checkbox").eq(1).click();
+		                    $("#productlist").find("input:checkbox").eq(0).click();
 		                    
 		                    for (var i = 0; i < $(".rdnum").length; i++) {
 		                    	$($(".rdnum")[i]).html(rd(168,999));
@@ -365,15 +377,19 @@ function getOrdered(){
 
 
 					 
-					<div>
+					<div style="display: none;">
 					<span><em>*</em>金额 :</span>
 					<div><em id="productPricesLabel" class="red">0</em>元</div>
 					</div>
 					
 					<div>
 						<span> <em>&nbsp;</em>已选 : 	</span>
-						<ul id="productSelected" class="productlist">
-						</ul>	
+						<ul id="zodiacSelected" class="zodiaclist" style="font-size: 0.8em;width: 80%;"></ul>
+					</div>
+
+					<div>
+						<span> <em>&nbsp;</em>  	</span>
+						<ul id="productSelected" class="zodiaclist" style="font-size: 0.8em"></ul>
 					</div>
 
 
