@@ -20,16 +20,13 @@
 
 <link rel="stylesheet" href="css/window.css"  />
 <link rel="stylesheet" href="css/latestorder.css"  />
-<!-- 
-<link rel="stylesheet" href="css/comment.css"  />
- -->
+
+
 <script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
 <script type="text/javascript" src="js/jquery.validate.js"></script>
-
 <script type="text/javascript" src="js/area.js"></script>
-<script type="text/javascript" src="js/accountant.js"></script>
-<script type="text/javascript" src="js/window.js"></script>
-<script type="text/javascript" src="js/base-loading.js"></script>
+
+
 
 
 <!-- 
@@ -115,11 +112,11 @@ function getOrdered(){
 	return ordered;
 }
 
-        jQuery.validator.addMethod("mobile", function(value, element) {
-          var length = value.length;
-          var mobile = /^(((13[0-9]{1})|(15[0-9]{1})|(18[0-9]{1})|(17[0-9]{1}))+\d{8})$/;
-          return this.optional(element) || (length == 11 && mobile.test(value));
-        }, "输入正确手机号");
+jQuery.validator.addMethod("mobile", function(value, element) {
+  var length = value.length;
+  var mobile = /^(((13[0-9]{1})|(15[0-9]{1})|(18[0-9]{1})|(17[0-9]{1}))+\d{8})$/;
+  return this.optional(element) || (length == 11 && mobile.test(value));
+}, "输入正确手机号");
 	           
 </script>
 
@@ -600,6 +597,11 @@ function getOrdered(){
 	
 	
 
+
+
+<script type="text/javascript" src="js/accountant.js"></script>
+<script type="text/javascript" src="js/window.js"></script>
+<script type="text/javascript" src="js/base-loading.js"></script>
 </body>
 </html>
 
