@@ -20,30 +20,11 @@
 
 <link rel="stylesheet" href="css/window.css"  />
 <link rel="stylesheet" href="css/latestorder.css"  />
-<!-- 
-<link rel="stylesheet" href="css/comment.css"  />
 
- -->
-<script type="text/javascript" src="js/jquery.js"></script>
-<script type="text/javascript" src="js/jquery.validate.js"></script>
-
+<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
 <script type="text/javascript" src="js/area.js"></script>
-<script type="text/javascript" src="js/accountant.js"></script>
-<script type="text/javascript" src="js/window.js"></script>
-<script type="text/javascript" src="js/base-loading.js"></script>
 
-
-<!-- 
-<script>
-var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "https://hm.baidu.com/hm.js?2e458190df0d76fd39fd4ba06912fe3d";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
-})();
-</script>
- -->
+ 
 
 </head>
 
@@ -110,19 +91,7 @@ var scrollComment = function(){
 	
 	
 	
-<script type="text/javascript">
-var ordered=0;
-function getOrdered(){
-	return ordered;
-}
 
-        jQuery.validator.addMethod("mobile", function(value, element) {
-          var length = value.length;
-          var mobile = /^(((13[0-9]{1})|(15[0-9]{1})|(18[0-9]{1})|(17[0-9]{1}))+\d{8})$/;
-          return this.optional(element) || (length == 11 && mobile.test(value));
-        }, "输入正确手机号");
-	           
-</script>
 
 <div id="order">
 <div class="wftitle"><span style="font-size: 28px; color: #e0ddd8;">在线奉请——</span><span style="color: #e0ddd8;">全国包邮，佛到付款！</span></div>
@@ -583,6 +552,36 @@ function getOrdered(){
 	</div>
 	
 	
+
+
+
+
+
+
+
+<script type="text/javascript" src="js/jquery.validate.js"></script>
+
+
+<script type="text/javascript" src="js/accountant.js"></script>
+<script type="text/javascript" src="js/window.js"></script>
+<script type="text/javascript" src="js/base-loading.js"></script>
+
+
+<script type="text/javascript">
+var ordered=0;
+function getOrdered(){
+	return ordered;
+}
+
+        jQuery.validator.addMethod("mobile", function(value, element) {
+          var length = value.length;
+          var mobile = /^(((13[0-9]{1})|(15[0-9]{1})|(18[0-9]{1})|(17[0-9]{1}))+\d{8})$/;
+          return this.optional(element) || (length == 11 && mobile.test(value));
+        }, "输入正确手机号");
+	           
+</script>
+
+
 
 </body>
 </html>
