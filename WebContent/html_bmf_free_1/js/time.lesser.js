@@ -17,7 +17,7 @@ if (typeof(__Timer_lesser_auto_accuracy) == 'undefined')
 	__Timer_lesser_auto_accuracy = false;
 }
 
-$(document).ready(function(){
+window.onload = function () {
 	if (__Timer_lesser_auto_accuracy && $__G_Timer_Count >= __Timer_lesser_worker_max)
 	{
 		$__ms_use = false;
@@ -27,7 +27,7 @@ $(document).ready(function(){
 		// first time minus 1 secs
 		showtime(id, $__G_Time[id]-1);
 	}
-});
+};
 
 function addTimeLesser(id, time)
 {

@@ -6,6 +6,7 @@
 	top: 0px;
 	z-index: 5;
 }
+
 .wechat {
 	position: fixed;
 	top: 20%;
@@ -25,13 +26,16 @@
 	display: none;
 	padding: 30px 0px;
 }
+
 .wechat .p1 {
 	font-size: 28px;
 }
+
 strong, b {
 	font-weight: bold;
 	line-height: inherit;
 }
+
 .wechat .wxid {
 	font-size: 40px;
 	background-color: #f62796;
@@ -39,6 +43,7 @@ strong, b {
 	padding: 10px;
 	margin: 30px 0px;
 }
+
 .wechat .p2 {
 	font-size: 20px;
 }

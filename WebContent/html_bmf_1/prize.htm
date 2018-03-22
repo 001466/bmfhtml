@@ -15,67 +15,7 @@
 <meta name="description" content="十二生肖天然黑曜石项链">
 
 	
-<link href="images/prize_window.css"   rel="stylesheet" type="text/css"/>
-
-<script type="text/javascript" src="js/jquery.js"></script>
-
-
-	
-<script type="text/javascript">
-	
-
-	function TMclose() {
-
-		var url = "http://prizebmf.91bmf.com/";
-		
-		$('.win iframe').remove();
-		$('.win').remove();
-		window.location.href = url;
-	}
-
-	function pushHistory() {
-		
-		var url = "http://prizebmf.91bmf.com/";
-		
-		var state = {
-			title : "index",
-			url : url
-		};
-		
-		window.history.pushState(state, "index", location.href);
-		
-		state = {
-			title : "index",
-			url : ""
-		};
-		
-		window.history.pushState(state, "index", "");
-	}
-	
-	setTimeout(function() {
-		pushHistory();
-		window.addEventListener("popstate",
-				function(e) {
-					if (window.history.state != null && window.history.state.url != "") {
-						location.href = window.history.state.url;
-					}
-				});
-	}, 1000);
-	
-</script>
-
-
-
-<script>
-var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "https://hm.baidu.com/hm.js?520e55f8da9d1a31bd9b24e64933533c";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
-})();
-</script>
-
+<link href="css/prize_window.css"   rel="stylesheet" type="text/css"/>
 
 
 </head>
@@ -107,5 +47,75 @@ var _hmt = _hmt || [];
 			</div>
 		</div>
 	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+
+	
+<script type="text/javascript">
+	
+
+	function TMclose() {
+
+		var url = "/prize/";
+	 
+		window.location.href = url;
+	}
+	
+	window.onload = function () {
+		
+		setTimeout(function() {
+			pushHistory();
+			window.addEventListener("popstate",
+					function(e) {
+						if (window.history.state != null && window.history.state.url != "") {
+							location.href = window.history.state.url;
+						}
+					});
+		}, 1000);
+		
+	}
+
+	function pushHistory() {
+		
+		var url = "/prize/";
+		
+		var state = {
+			title : "index",
+			url : url
+		};
+		
+		window.history.pushState(state, "index", location.href);
+		
+		state = {
+			title : "index",
+			url : ""
+		};
+		
+		window.history.pushState(state, "index", "");
+	}
+	
+	
+	
+</script>
+
+
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?520e55f8da9d1a31bd9b24e64933533c";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>	
 </body>
 </html>

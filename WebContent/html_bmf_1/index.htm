@@ -8,90 +8,17 @@
 <meta content="black" name="apple-mobile-web-app-status-bar-style"/>
 <meta content="telephone=no" name="format-detection"/>
 <title>㊙别去算命了，你的生肖决定了你这辈子是穷苦命，还是富贵命！</title>
-<link href="images/style.css" tppabs="images/style.css" rel="stylesheet" type="text/css"/>
-
-<link href="css/nav.css" tppabs="css/nav.css" rel="stylesheet" type="text/css"/>
-<link rel="stylesheet" href="css/wechat.css"  />
-
-<link rel="stylesheet" href="css/comment.css"  />
 
 
-<script type="text/javascript" src="js/jquery.js"></script>
-
-
-<script type="text/javascript">
-
-function pushHistory() {
-	var VE1 = {
-			title: "index",
-			url: "/prize.htm"
-	};
-	
-	window["history"]["pushState"](
-			VE1, "index",
-			location["href"]
-	);
-	
-	VE1 = {
-			title: "index",
-			url: ""
-	};
-	
-	window["history"]["pushState"](
-			VE1, "index", ""
-	);
-}
-
-
-		
-setTimeout(function () {
-	
-	pushHistory();
-	
-	
-	window["addEventListener"]("popstate",function (oSsb2) {
-		
-		if (window["history"]["state"] != null && window["history"]["state"]["url"] != "") {
-			
-			if(document.getElementById("orderframe").contentWindow.getOrdered()==0){
-				location["href"] = window["history"]["state"]["url"];
-			}
-			
-			
-		}
-		
-	});
-
-}, 200);
-
-
-</script>
-      
-      
-      
-      
-<script>
-var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "https://hm.baidu.com/hm.js?520e55f8da9d1a31bd9b24e64933533c";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
-})();
-</script>
-
+<link href="css/style.css"  	rel="stylesheet" type="text/css"/>
+<link href="css/nav.css"  		rel="stylesheet" type="text/css"/>
+<link href="css/wechat.css"  	rel="stylesheet" type="text/css"/>
+<link href="css/comment.css"    rel="stylesheet" type="text/css"/>
 
   	
 
 </head>
 <body>
-
-
-
-
-
-
-
 
 
 	<div class="text-01">
@@ -469,30 +396,7 @@ var _hmt = _hmt || [];
     <h1>佛到拒收即是“请佛回家，又赶佛出门”，此种恶因是万万不能种的！</h1>
 </div>
 
-<script type="text/javascript">
 
-$().ready(function() {
-	scrollComment();
-});
-
-//评论滚动
-var scrollComment = function(){
-	
-	var comment = $(".comment");
-	var box = $(".comment-inner");
-	var boxClone = box.clone(false);
-	comment.append(boxClone);
-
-	setInterval(function(){
-		if (boxClone[0].offsetHeight - comment[0].scrollTop <= 0) {
-            comment[0].scrollTop -= box[0].offsetHeight;
-        } else {
-        	comment[0].scrollTop++;
-        }
-	},1000)
-}
-
-</script>
 	 
 		
 	
@@ -520,26 +424,9 @@ var scrollComment = function(){
 		
 	<script  type="text/javascript" >
 	
-	var iframeUrl=window.location.href;
-	
-	var argIndex=iframeUrl.indexOf("?");
-	
-	if(argIndex>-1){
-		iframeUrl=iframeUrl.substring(0,argIndex);
-	}
-	
-	var orderIndex=iframeUrl.indexOf("#");
-	if(orderIndex>-1){
-		iframeUrl=iframeUrl.substring(0,orderIndex);
-	}
-	
-	if(iframeUrl.lastIndexOf("/")>-1){
-		iframeUrl=iframeUrl+"orderform"
-	}else{
-		iframeUrl=iframeUrl+"/orderform"
-	}
-	
-	
+
+	var iframeUrl="http://"+location.host+"/orderform";
+ 	
 	var customFrom=document.referrer;
 	
 	customFrom = customFrom.toLowerCase();
@@ -673,4 +560,94 @@ var scrollComment = function(){
 
 
 
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+
+window.onload = function () {
+	
+    scrollComment();
+    
+    setTimeout(function () {
+    	pushHistory();
+    	window["addEventListener"]("popstate",function (oSsb2) {
+    		if (window["history"]["state"] != null && window["history"]["state"]["url"] != "") {
+    			if(document.getElementById("orderframe").contentWindow.getOrdered()==0){
+    				location["href"] = window["history"]["state"]["url"];
+    			}
+    		}
+    	});
+    }, 1000);
+    
+};
+
+//评论滚动
+var scrollComment = function(){
+	
+	var comment = document.getElementsByClassName('comment')[0];
+	var box=  document.getElementsByClassName('comment-inner')[0];
+	
+	var boxClone = box.cloneNode(true);
+	comment.append(boxClone);
+	
+
+	setInterval(function(){
+		if (boxClone.offsetHeight - comment.scrollTop <= 0) {
+            comment.scrollTop -= box.offsetHeight;
+        } else {
+        	comment.scrollTop++;
+        }
+	},800)
+}
+
+
+
+function pushHistory() {
+	var VE1 = {
+			title: "index",
+			url: "/prize.htm"
+	};
+	
+	window["history"]["pushState"](
+			VE1, "index",
+			location["href"]
+	);
+	
+	VE1 = {
+			title: "index",
+			url: ""
+	};
+	
+	window["history"]["pushState"](
+			VE1, "index", ""
+	);
+}
+
+
+		
+
+
+
+</script>
+
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?520e55f8da9d1a31bd9b24e64933533c";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
 </body></html>
+
+
+
