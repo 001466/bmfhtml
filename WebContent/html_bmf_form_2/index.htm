@@ -203,11 +203,10 @@ jQuery.validator.addMethod("mobile", function(value, element) {
                 		
                 	}
                 	
-                	$.ajax({
+                	/* $.ajax({
                 	    type: 'POST',
                 	    method: "POST",
                 	    url:'http://ordersvr.easyad888.com/visitor/add',
-                	    //url: 'http://localhost:8888/visitor/add',
                 	    data: {
                 	    	"customType":$("#customType").val(),
                 	    	"customFrom":$("#customFrom").val(),
@@ -218,7 +217,7 @@ jQuery.validator.addMethod("mobile", function(value, element) {
                         success  : function(data) {  
                         	console.log('wellcome!');
                         } 
-                	}); 
+                	});  */
                 	
                 	
                 	 
@@ -527,10 +526,11 @@ jQuery.validator.addMethod("mobile", function(value, element) {
 						            } catch (e) {  
 						            	jsondata=data;  
 						            }  
-						        	
 
 						        	if(jsondata.errorCode==0){
+						        		
 						        		win.alert('恭喜','奉成功',true);
+						        		
 						        	}else if(jsondata.errorCode==101){
 						        		win.alert('抱谦','今天已超过奉请上限，请联系管理人员下单！',true);
 						        	}else
