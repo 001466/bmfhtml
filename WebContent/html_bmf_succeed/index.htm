@@ -45,8 +45,8 @@ function getOrdered(){
 			
 			<div class="body-panel" >
 				
-				<p class="btns"> 恭喜您是第<span style="color: red; font-weight: bold;" id="Num">955</span>位与佛结缘的缘主。</p>
-				<p class="btns">我们会尽快安排义工与您联系，沟通相关献请事宜。</p>
+				<p class="btns"> 恭喜您!您是第<span style="color: red; font-weight: bold;" id="Num">955</span>位与佛结缘的缘主。</p>
+				<p class="btns">我们会安排义工与您联系，沟通相关事宜。</p>
 				<p class="btns">介时请注意接听义工电话。</p>
 				
 				
@@ -78,6 +78,9 @@ function getOrdered(){
 <script type="text/javascript">
 
 window.onload = function () {
+	
+	$('html,body').animate({scrollTop: '0px'}, 800);
+	
 	
 	document.oncontextmenu=function(){return false;}
 	
@@ -125,6 +128,8 @@ function pushHistory() {
 }
 
 
+if(parent.document.getElementById("orderbtn"))
+	parent.document.getElementById("orderbtn").click();
 
 
 </script>

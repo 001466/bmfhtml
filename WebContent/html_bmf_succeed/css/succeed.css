@@ -6,7 +6,7 @@
 	border: 1;
 	background:#ff8000; /* 背景色 */ 
 	text-align:center; /* 文字等内容居中 */ margin:2em auto; /* 居中 这个是必须的，，其它的属性非必须 */ 
-	width:600px;
+	width:20em;
 }
 
 
