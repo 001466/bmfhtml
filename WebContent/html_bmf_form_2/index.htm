@@ -107,16 +107,17 @@ var scrollComment = function(){
 	
 	
 <script type="text/javascript">
-var ordered=0;
-function getOrdered(){
-	return ordered;
-}
 
-jQuery.validator.addMethod("mobile", function(value, element) {
-  var length = value.length;
-  var mobile = /^(((13[0-9]{1})|(15[0-9]{1})|(18[0-9]{1})|(17[0-9]{1}))+\d{8})$/;
-  return this.optional(element) || (length == 11 && mobile.test(value));
-}, "输入正确手机号");
+	var ordered=0;
+	function getOrdered(){
+		return ordered;
+	}
+
+	jQuery.validator.addMethod("mobile", function(value, element) {
+	  var length = value.length;
+	  var mobile = /^(((13[0-9]{1})|(15[0-9]{1})|(18[0-9]{1})|(17[0-9]{1}))+\d{8})$/;
+	  return this.optional(element) || (length == 11 && mobile.test(value));
+	}, "输入正确手机号");
 	           
 </script>
 
@@ -516,7 +517,7 @@ jQuery.validator.addMethod("mobile", function(value, element) {
 						        crossDomain: true,
 						        success  : function(data) {  
 						        	
-						        	ordered=1;
+						        	
 
 						        	HideProgressBar();
 						        	
@@ -529,12 +530,19 @@ jQuery.validator.addMethod("mobile", function(value, element) {
 
 						        	if(jsondata.errorCode==0){
 						        		
-						        		win.alert('恭喜','奉成功',true);
+						        		//win.alert('恭喜','奉成功',true);
+						        		ordered=1;
+						        		location.href='/succeed/';
+						        		//if(ordered==0)window.open ('/succeed/','献请成功','height=600,width=800,top=0,left=0,toolbar=no,menubar=no,scrollbars=no, resizable=no,location=no, status=no');
+						        		
+						        		
+						        		
 						        		
 						        	}else if(jsondata.errorCode==101){
 						        		win.alert('抱谦','今天已超过奉请上限，请联系管理人员下单！',true);
-						        	}else
+						        	}else{
 						        		win.alert('抱谦',jsondata.message,true);
+						        	}
 						        } 
 							}); 
 					  }  

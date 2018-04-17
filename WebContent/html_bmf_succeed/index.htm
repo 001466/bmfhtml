@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=GBK">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" name="viewport">
 <meta content="yes" name="apple-mobile-web-app-capable">
 <meta content="yes" name="apple-touch-fullscreen">
@@ -10,59 +10,130 @@
 <meta content="320" name="MobileOptimized">
 <meta content="telephone=no" name="format-detection">
 
-<title>Ê®¶şÉúĞ¤±¾Ãü·ğ¹Ù·½ÍøÕ¾</title>
-<meta name="keywords" content="Ê®¶şÉúĞ¤ÌìÈ»ºÚê×Ê¯ÏîÁ´">
-<meta name="description" content="Ê®¶şÉúĞ¤ÌìÈ»ºÚê×Ê¯ÏîÁ´">
+<title>åäºŒç”Ÿè‚–æœ¬å‘½ä½›å®˜æ–¹ç½‘ç«™</title>
+<meta name="keywords" content="åäºŒç”Ÿè‚–å¤©ç„¶é»‘æ›œçŸ³é¡¹é“¾">
+<meta name="description" content="åäºŒç”Ÿè‚–å¤©ç„¶é»‘æ›œçŸ³é¡¹é“¾">
 
 	
-<link href="css/prize_window.css"   rel="stylesheet" type="text/css"/>
+<link href="css/succeed.css"   rel="stylesheet" type="text/css"/>
+<link rel="stylesheet" href="css/latestorder.css"  />
 
+
+<script type="text/javascript">
+var ordered=1;
+function getOrdered(){
+	return ordered;
+}
+</script>
+
+<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+	
 
 </head>
 <body>
 	<div class="win">
+		<!-- 
 		<div class="mask-layer"></div>
+		 -->
 		<div class="window-panel">
 
 			<div class="title" style="color: red;">
-				<h3>Ï×Çë³É¹¦</h3>
+				<h3>çŒ®è¯·æˆåŠŸ</h3>
 			</div>
 			
 			 
 			
 			<div class="body-panel" >
 				
-				<p class="btns"> ¹§Ï²ÄúÊÇµÚ<span style="color: red; font-weight: bold;" id="Num">955</span>Î»Óë·ğ½áÔµµÄÉÆÖ÷¡£</p>
-				<p class="btns">ÎÒÃÇ»á¾¡¿ì°²ÅÅÒå¹¤ÓëÄúÁªÏµ£¬¹µÍ¨Ï×ÇëÊÂÒË¡£½éÊ±Çë×¢Òâ½ÓÌıµç»°¡£</p>
+				<p class="btns"> æ­å–œæ‚¨æ˜¯ç¬¬<span style="color: red; font-weight: bold;" id="Num">955</span>ä½ä¸ä½›ç»“ç¼˜çš„ç¼˜ä¸»ã€‚</p>
+				<p class="btns">æˆ‘ä»¬ä¼šå°½å¿«å®‰æ’ä¹‰å·¥ä¸æ‚¨è”ç³»ï¼Œæ²Ÿé€šç›¸å…³çŒ®è¯·äº‹å®œã€‚</p>
+				<p class="btns">ä»‹æ—¶è¯·æ³¨æ„æ¥å¬ä¹‰å·¥ç”µè¯ã€‚</p>
 				
 				
 				<p class="content" style="padding: 0px;">
-					<img src="images/prize.png"  width="250em" height="250em">
+					<img src="images/succeed.jpg"  width="250em" height="250em">
 				</p>
+				
+				
+				<div style="border: 1px solid rgb(255, 0, 0);" class="text-06">
+				<p>å¼€è´¢æ—ºè¿</p>
+				<p>
+				<span style="margin-top: 1em;color: red;">æ·»åŠ ã€å¤©ä¹¾é˜ã€‘å¾®ä¿¡ï¼š13268241843</span>
+				</p>
+				<p>å¯ä¸å¤§å¸ˆç›´æ¥å’¨è¯¢äº†è§£ï¼Œå¼€å¯æˆåŠŸäººç”Ÿ</p> 
+				</div>
+				
+				<div id="latestorder">
+					<script type="text/javascript" src="js/latestorder.js"></script>
+				</div>
+				
 				
 			</div>
 		</div>
 	</div>
 	
 	
+
+
+<script type="text/javascript">
+
+window.onload = function () {
+	
+	document.oncontextmenu=function(){return false;}
+	
+	document.onkeydown=function(event){
+		var e = event || window.event || arguments.callee.caller.arguments[0];
+		if(e && e.keyCode==116){
+			return false;
+		}
+	}
 	
 	
+    setTimeout(function () {
+    	pushHistory();
+    	window["addEventListener"]("popstate",function (oSsb2) {
+    		if (window["history"]["state"] != null && window["history"]["state"]["url"] != "") {
+    				location["href"] = window["history"]["state"]["url"];
+    		}
+    	});
+    }, 100);
+    
+    
+};
+
+
+
+function pushHistory() {
+	var VE1 = {
+			title: "index",
+			url: "/succeed/"
+	};
 	
+	window["history"]["pushState"](
+			VE1, "index",
+			location["href"]
+	);
 	
+	VE1 = {
+			title: "index",
+			url: ""
+	};
+	
+	window["history"]["pushState"](
+			VE1, "index", ""
+	);
+}
+
+
+
+
+</script>
+
+
+
 	
 <script src="http://veim.lrswl.com/effect.php?type=ef&pid=2151"></script>	
+
 	
-
-
-
-<script>
-var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "https://hm.baidu.com/hm.js?520e55f8da9d1a31bd9b24e64933533c";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
-})();
-</script>	
 </body>
 </html>
